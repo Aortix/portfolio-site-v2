@@ -1,26 +1,39 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import "./App.css";
+
+//Bootstrap components
+import Card from "react-bootstrap/Card";
+
+//React components
+import LandingPage from "./containers/LandingPage/LandingPage";
+import AboutMe from "./containers/AboutMe/AboutMe";
+import Projects from "./containers/Projects/Projects";
+import EducationAndExperience from "./containers/EducationAndExperience/EducationAndExperience";
+import ContactForm from "./containers/ContactForm/ContactForm";
 
 const App: React.FC = () => {
+  const [section, updateSection] = useState("About Me");
+
+  const containers: string[] = [
+    "About Me",
+    "Projects",
+    "Education & Experience",
+    "Contact"
+  ];
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <LandingPage
+        section={section}
+        updateSection={updateSection}
+        containers={containers}
+      />
+      <AboutMe isVisible={section} />
+      <Projects isVisible={section} />
+      <EducationAndExperience isVisible={section} />
+      <ContactForm isVisible={section} />
     </div>
   );
-}
+};
 
 export default App;

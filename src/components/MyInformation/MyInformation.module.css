@@ -1,0 +1,16 @@
+.mainContainer {
+  text-align: center;
+}
+
+.contactText {
+  font-family: "Songti SC";
+  font-size: 17px;
+  margin: 0px;
+}
+
+.links {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 7px;
+}

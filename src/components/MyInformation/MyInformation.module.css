@@ -2,6 +2,11 @@
   text-align: center;
 }
 
+.nameText {
+  margin-top: 25px;
+  margin-bottom: 5px;
+}
+
 .contactText {
   font-family: "Songti SC";
   font-size: 17px;
@@ -12,5 +17,14 @@
   position: absolute;
   top: 0;
   left: 0;
-  margin: 7px;
+  margin: 5px;
+  height: 20px;
+}
+
+.links i {
+  margin: 3px;
+}
+
+.links a {
+  color: inherit;
 }

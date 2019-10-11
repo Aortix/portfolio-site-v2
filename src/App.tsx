@@ -12,14 +12,14 @@ import EducationAndExperience from "./containers/EducationAndExperience/Educatio
 import ContactForm from "./containers/ContactForm/ContactForm";
 
 const App: React.FC = () => {
-  const [section, updateSection] = useState("About Me");
-
   const containers: string[] = [
-    "About Me",
-    "Projects",
-    "Education & Experience",
-    "Contact"
+    "ABOUT ME",
+    "PROJECTS",
+    "EDUCATION & EXPERIENCE",
+    "CONTACT"
   ];
+
+  const [section, updateSection] = useState(containers[0]);
 
   return (
     <div className="App">

@@ -21,9 +21,10 @@ export default function SectionBlock(props: AppProps): ReactElement {
             .filter(allItems => {
               return allItems !== props.section;
             })
-            .map(notSelected => {
+            .map((notSelected, index) => {
               return (
                 <p
+                  key={index}
                   onClick={() => {
                     props.updateSection(notSelected);
                     updateChangingSection(false);

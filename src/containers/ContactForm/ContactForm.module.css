@@ -1,0 +1,15 @@
+.mainContainer {
+  width: 80%;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+.titleContainer {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.titleText {
+  font-size: 34px;
+  margin-left: 5px;
+}

@@ -1,0 +1,25 @@
+.mainContainer {
+  text-align: center;
+}
+
+.projectImage {
+  cursor: pointer;
+  height: 10%;
+  width: 100%;
+}
+
+.techListContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  list-style-type: none;
+  padding: 0;
+  font-size: 14px;
+  font-weight: 200;
+}
+
+.techListText:last-child::after {
+  content: "Git";
+}

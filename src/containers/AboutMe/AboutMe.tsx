@@ -28,7 +28,7 @@ export default function AboutMe(props: AppProps): React.ReactElement {
           My main takeaway from the time that I have invested so far is that
           coding has become a passion of mine and it is a passion that I want to
           hold on to no matter where the future takes me. Also, creating this
-          stuff feels kind of cool.
+          stuff is kind of cool.
           <br /> <br />
           Thanks for reading.
         </p>

@@ -14,27 +14,19 @@ export default function ContactForm(props: AppProps): React.ReactElement {
           <span className={styles.titleText}>Contact Form</span>
         </div>
         <form>
-          <label>
-            Name
-            <input type="text" required></input>
-          </label>
-          <label>
-            Company
-            <input type="text" required></input>
-          </label>
-          <label>
-            Contact Email
-            <input type="text" required></input>
-          </label>
-          <label>
-            Phone (Optional)
-            <input type="text"></input>
-          </label>
-          <label>
-            Message
-            <input type="text" required></input>
-          </label>
-          <button type="submit">Submit</button>
+          <label htmlFor="name">Name</label>
+          <input type="text" id="name" required></input>
+          <label htmlFor="company">Company</label>
+          <input type="text" id="company" required></input>
+          <label htmlFor="contact-email">Contact Email</label>
+          <input type="text" id="contact-email" required></input>
+          <label htmlFor="phone">Phone (Optional)</label>
+          <input type="text" id="phone"></input>
+          <label htmlFor="message">Message</label>
+          <textarea id="message" rows={6} required></textarea>
+          <button type="submit" className={styles.formSubmitButton}>
+            Submit
+          </button>
         </form>
       </div>
     );

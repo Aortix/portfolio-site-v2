@@ -13,3 +13,25 @@
   font-size: 34px;
   margin-left: 5px;
 }
+
+form label {
+  display: block;
+}
+
+form input {
+  display: block;
+  border: 1px solid black;
+  width: 100%;
+}
+
+form textarea {
+  display: block;
+  border: 1px solid black;
+  width: 100%;
+}
+
+.formSubmitButton {
+  border: 1px solid black;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}

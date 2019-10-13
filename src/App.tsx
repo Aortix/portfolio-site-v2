@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./App.css";
 
 //Bootstrap components
@@ -10,6 +10,7 @@ import AboutMe from "./containers/AboutMe/AboutMe";
 import Projects from "./containers/Projects/Projects";
 import EducationAndExperience from "./containers/EducationAndExperience/EducationAndExperience";
 import ContactForm from "./containers/ContactForm/ContactForm";
+import ScrollToTopButton from "./components/ScrollToTopButton/ScrollToTopButton";
 
 const App: React.FC = () => {
   const containers: string[] = [
@@ -20,6 +21,11 @@ const App: React.FC = () => {
   ];
 
   const [section, updateSection] = useState(containers[0]);
+  const [inProp, setInProp] = useState(false);
+
+  useEffect(() => {
+    setInProp(true);
+  }, []);
 
   return (
     <div className="App">
@@ -27,11 +33,14 @@ const App: React.FC = () => {
         section={section}
         updateSection={updateSection}
         containers={containers}
+        inProp={inProp}
+        setInProp={setInProp}
       />
-      <AboutMe isVisible={section} />
-      <Projects isVisible={section} />
-      <EducationAndExperience isVisible={section} />
-      <ContactForm isVisible={section} />
+      <AboutMe isVisible={section} inProp={inProp} />
+      <Projects isVisible={section} inProp={inProp} />
+      <EducationAndExperience isVisible={section} inProp={inProp} />
+      <ContactForm isVisible={section} inProp={inProp} />
+      <ScrollToTopButton />
     </div>
   );
 };

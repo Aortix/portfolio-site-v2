@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./LandingPage.module.css";
 
 //React components
@@ -9,16 +9,27 @@ interface AppProps {
   section: string;
   updateSection: (update: string) => void;
   containers: string[];
+  inProp: boolean;
+  setInProp: (update: boolean) => void;
 }
 
 export default function LandingPage(props: AppProps): React.ReactElement {
+  const [landingPageInProp, setLandingPageInProp] = useState(false);
+
+  useEffect(() => {
+    setLandingPageInProp(true);
+  }, []);
+
   return (
-    <div className={styles.mainContainer}>
-      <MyInformation />
+    <div id="Landing Page" className={styles.mainContainer}>
+      <MyInformation landingPageInProp={landingPageInProp} />
       <SectionBlock
         section={props.section}
         updateSection={props.updateSection}
         containers={props.containers}
+        inProp={props.inProp}
+        setInProp={props.setInProp}
+        landingPageInProp={landingPageInProp}
       />
     </div>
   );

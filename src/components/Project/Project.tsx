@@ -8,25 +8,40 @@ interface AppProps {
   projectVideo?: any;
   projectImage?: any;
   projectTechnologies: string[];
-  projectMobileAvailability?: any[];
+  projectPlayStore?: {
+    target: string;
+    source: string;
+  };
+  projectAppStore?: {
+    target: string;
+    source: any;
+  };
   projectDescription: string;
 }
 
 function Project(props: AppProps) {
   return (
     <div className={styles.mainContainer}>
-      <h4>{props.projectName}</h4>
-      <a
-        href={props.projectGitHubLink}
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        GitHub
-      </a>
-      <span>&nbsp;|&nbsp;</span>
-      <a href={props.projectLink} target="_blank" rel="noopener noreferrer">
-        Website
-      </a>
+      <h4 className={styles.projectNameText}>{props.projectName}</h4>
+      <div className={styles.projectLinksContainer}>
+        <a
+          href={props.projectGitHubLink}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={styles.projectLinkText}
+        >
+          GitHub
+        </a>
+        <span>&nbsp;|&nbsp;</span>
+        <a
+          href={props.projectLink}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={styles.projectLinkText}
+        >
+          Website
+        </a>
+      </div>
       {props.projectVideo ? (
         <p>Video info here</p>
       ) : (
@@ -50,17 +65,40 @@ function Project(props: AppProps) {
           );
         })}
       </ul>
-      {props.projectMobileAvailability
-        ? props.projectMobileAvailability.map((avail, index) => {
-            return (
+      {!props.projectPlayStore && !props.projectAppStore ? null : (
+        <div>
+          {!props.projectPlayStore ? null : (
+            <a
+              href={props.projectPlayStore.target}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <img
-                key={props.projectName + avail + index}
-                src={avail}
-                alt="Mobile Location"
+                alt="Get it on Google Play"
+                src={props.projectPlayStore.source}
+                style={{ display: "inline-block", height: "80px" }}
               />
-            );
-          })
-        : null}
+            </a>
+          )}
+          {!props.projectAppStore ? null : (
+            <a
+              href={props.projectAppStore.target}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src={props.projectAppStore.source}
+                alt="Get it on the App Store"
+                style={{
+                  display: "inline-block",
+                  height: "60px",
+                  padding: "10px"
+                }}
+              />
+            </a>
+          )}
+        </div>
+      )}
       <p>{props.projectDescription}</p>
     </div>
   );

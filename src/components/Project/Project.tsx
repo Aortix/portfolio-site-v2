@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, Fragment } from "react";
 import styles from "./Project.module.css";
 
 interface AppProps {
@@ -20,6 +20,8 @@ interface AppProps {
 }
 
 function Project(props: AppProps) {
+  const [technology, showTechnology] = useState(false);
+
   return (
     <div className={styles.mainContainer}>
       <h4 className={styles.projectNameText}>{props.projectName}</h4>
@@ -53,18 +55,37 @@ function Project(props: AppProps) {
           />
         </a>
       )}
-      <ul className={styles.techListContainer}>
-        {props.projectTechnologies.map((tech, index, array) => {
-          return (
-            <li
-              key={props.projectName + tech + index}
-              className={styles.techListText}
-            >
-              {tech}&nbsp;&#8226;&nbsp;
-            </li>
-          );
-        })}
-      </ul>
+      {technology === false ? (
+        <button
+          onClick={() => {
+            showTechnology(!technology);
+          }}
+        >
+          Show Technologies
+        </button>
+      ) : (
+        <Fragment>
+          <button
+            onClick={() => {
+              showTechnology(!technology);
+            }}
+          >
+            Show Technologies
+          </button>
+          <ul className={styles.techListContainer}>
+            {props.projectTechnologies.map((tech, index, array) => {
+              return (
+                <li
+                  key={props.projectName + tech + index}
+                  className={styles.techListText}
+                >
+                  {tech}&nbsp;&#8226;&nbsp;
+                </li>
+              );
+            })}
+          </ul>
+        </Fragment>
+      )}
       {!props.projectPlayStore && !props.projectAppStore ? null : (
         <div>
           {!props.projectPlayStore ? null : (

@@ -6,8 +6,9 @@
 }
 
 .titleContainer {
-  margin-top: 15px;
-  margin-bottom: 15px;
+  margin-bottom: 25px;
+  display: inline-block;
+  color: #282828;
 }
 
 .titleText {

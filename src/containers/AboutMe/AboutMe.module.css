@@ -1,5 +1,6 @@
 .mainContainer {
   width: 80%;
+  max-width: 900px;
   margin: 0 auto;
   line-height: 1.5;
   margin-bottom: 15px;

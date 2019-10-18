@@ -1,7 +1,9 @@
 .mainContainer {
   width: 80%;
+  max-width: 900px;
   margin: 0 auto;
   line-height: 1.5;
+  padding-bottom: 45px;
 }
 
 .titleContainer {
@@ -22,6 +24,8 @@ form input {
   display: block;
   border: 1px solid black;
   width: 100%;
+  margin-bottom: 8px;
+  padding: 5px;
 }
 
 form textarea {
@@ -31,7 +35,22 @@ form textarea {
 }
 
 .formSubmitButton {
-  border: 1px solid black;
-  margin-top: 15px;
-  margin-bottom: 15px;
+  border-radius: 5px;
+  color: #606060;
+  background-color: inherit;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-size: 12px;
+  font-weight: 200;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+@media only screen and (min-width: 600px) {
+  form {
+    width: 70%;
+    margin: 0 auto;
+  }
 }

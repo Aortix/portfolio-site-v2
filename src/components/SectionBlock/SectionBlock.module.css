@@ -20,3 +20,10 @@
 .mainContainer p:hover {
   cursor: pointer;
 }
+
+@media only screen and (min-width: 800px) {
+  .mainContainer {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-column-gap: 35px;
+  }
+}

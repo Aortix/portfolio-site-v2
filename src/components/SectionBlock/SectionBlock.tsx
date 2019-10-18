@@ -1,4 +1,4 @@
-import React, { useState, ReactElement } from "react";
+import React, { useState, useEffect, ReactElement } from "react";
 import styles from "./SectionBlock.module.css";
 import { Transition } from "react-transition-group";
 
@@ -15,7 +15,19 @@ interface AppProps {
 }
 
 export default function SectionBlock(props: AppProps): ReactElement {
-  const [changingSection, updateChangingSection] = useState(false);
+  const [changingSection, updateChangingSection] = useState(
+    window.innerWidth >= 800 ? true : false
+  );
+
+  useEffect(() => {
+    window.addEventListener("resize", (e: any) => {
+      if (e.target.innerWidth >= 800) {
+        updateChangingSection(true);
+      } else {
+        updateChangingSection(false);
+      }
+    });
+  }, []);
 
   return (
     <Transition in={props.landingPageInProp} timeout={easeInOut.duration}>
@@ -27,36 +39,57 @@ export default function SectionBlock(props: AppProps): ReactElement {
             ...easeInOut.transitionStyles[state]
           }}
         >
-          <p
-            onClick={() => {
-              updateChangingSection(!changingSection);
-            }}
-          >
-            {props.section}
-          </p>
-          {changingSection === false
-            ? null
-            : props.containers
-                .filter(allItems => {
-                  return allItems !== props.section;
-                })
-                .map((notSelected, index) => {
-                  return (
-                    <p
-                      key={index}
-                      onClick={() => {
-                        props.updateSection(notSelected);
-                        props.setInProp(false);
-                        setTimeout(() => {
-                          props.setInProp(true);
-                        }, 100);
-                        updateChangingSection(false);
-                      }}
-                    >
-                      {notSelected}
-                    </p>
-                  );
-                })}
+          {window.innerWidth >= 800 ? (
+            props.containers.map((eachContainer, index) => {
+              return (
+                <p
+                  key={index}
+                  onClick={() => {
+                    props.updateSection(eachContainer);
+                    props.setInProp(false);
+                    setTimeout(() => {
+                      props.setInProp(true);
+                    }, 100);
+                  }}
+                >
+                  {eachContainer}
+                </p>
+              );
+            })
+          ) : (
+            <div>
+              <p
+                onClick={() => {
+                  updateChangingSection(!changingSection);
+                }}
+              >
+                {props.section}
+              </p>
+              {changingSection === false
+                ? null
+                : props.containers
+                    .filter(allItems => {
+                      return allItems !== props.section;
+                    })
+                    .map((notSelected, index) => {
+                      return (
+                        <p
+                          key={index}
+                          onClick={() => {
+                            props.updateSection(notSelected);
+                            props.setInProp(false);
+                            setTimeout(() => {
+                              props.setInProp(true);
+                            }, 100);
+                            updateChangingSection(false);
+                          }}
+                        >
+                          {notSelected}
+                        </p>
+                      );
+                    })}
+            </div>
+          )}
         </div>
       )}
     </Transition>

@@ -7,6 +7,8 @@ interface AppProps {
   projectLink: string;
   projectVideo?: any;
   projectImage?: any;
+  projectMobileImage?: any;
+  projectMobileVideo?: any;
   projectTechnologies: string[];
   projectPlayStore?: {
     target: string;
@@ -46,7 +48,7 @@ function Project(props: AppProps) {
       </div>
       {props.projectVideo ? (
         <p>Video info here</p>
-      ) : (
+      ) : !props.projectMobileImage && !props.projectMobileVideo ? (
         <a href={props.projectLink} target="_blank" rel="noopener noreferrer">
           <img
             className={styles.projectImage}
@@ -54,23 +56,33 @@ function Project(props: AppProps) {
             alt="Project Visualization"
           />
         </a>
+      ) : (
+        <a href={props.projectLink} target="_blank" rel="noopener noreferrer">
+          <img
+            className={styles.projectMobileImage}
+            src={props.projectMobileImage || props.projectMobileVideo}
+            alt="Project Visualization"
+          />
+        </a>
       )}
       {technology === false ? (
         <button
+          className={styles.toggleTechnologiesButton}
           onClick={() => {
             showTechnology(!technology);
           }}
         >
-          Show Technologies
+          Display Technology
         </button>
       ) : (
         <Fragment>
           <button
+            className={styles.toggleTechnologiesButton}
             onClick={() => {
               showTechnology(!technology);
             }}
           >
-            Show Technologies
+            Display Technology
           </button>
           <ul className={styles.techListContainer}>
             {props.projectTechnologies.map((tech, index, array) => {
@@ -79,7 +91,7 @@ function Project(props: AppProps) {
                   key={props.projectName + tech + index}
                   className={styles.techListText}
                 >
-                  {tech}&nbsp;&#8226;&nbsp;
+                  {tech}
                 </li>
               );
             })}
@@ -87,7 +99,7 @@ function Project(props: AppProps) {
         </Fragment>
       )}
       {!props.projectPlayStore && !props.projectAppStore ? null : (
-        <div>
+        <div className={styles.projectMobileLinks}>
           {!props.projectPlayStore ? null : (
             <a
               href={props.projectPlayStore.target}
@@ -97,7 +109,7 @@ function Project(props: AppProps) {
               <img
                 alt="Get it on Google Play"
                 src={props.projectPlayStore.source}
-                style={{ display: "inline-block", height: "80px" }}
+                style={{ display: "inline-block", height: "70px" }}
               />
             </a>
           )}
@@ -112,15 +124,14 @@ function Project(props: AppProps) {
                 alt="Get it on the App Store"
                 style={{
                   display: "inline-block",
-                  height: "60px",
-                  padding: "10px"
+                  height: "50px"
                 }}
               />
             </a>
           )}
         </div>
       )}
-      <p>{props.projectDescription}</p>
+      <p className={styles.projectDescription}>{props.projectDescription}</p>
     </div>
   );
 }

@@ -1,6 +1,7 @@
 .mainContainer {
   text-align: center;
-  margin: 30px;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 .projectNameText {
@@ -13,24 +14,82 @@
 }
 
 .projectImage {
+  display: block;
+  max-width: 400px;
+  max-height: 260px;
+  margin: 0 auto;
   cursor: pointer;
-  height: 10%;
   width: 100%;
+  border: 1px solid black;
+}
+
+.projectMobileImage {
+  display: block;
+  max-height: 290px;
+  margin: 0 auto;
+  cursor: pointer;
+  width: 180px;
+  border: 1px solid black;
+}
+
+.toggleTechnologiesButton {
+  border-radius: 5px;
+  color: #606060;
+  background-color: inherit;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-size: 12px;
+  font-weight: 200;
+  cursor: pointer;
+  margin: 10px;
 }
 
 .techListContainer {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
+  max-width: 600px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 8px;
+  grid-row-gap: 8px;
   list-style-type: none;
   padding: 0;
   font-size: 14px;
   font-weight: 200;
-  margin: 7px;
+  margin: 10px auto;
 }
 
-.techListText:last-child::after {
-  content: "Git";
+.techListText {
+  max-width: 120px;
+  display: inline-block;
+  color: #606060;
+  background-color: #f8f8f8;
+  font-size: 12px;
+  font-weight: 200;
+  border-left: 1px solid #606060;
+  padding: 5px;
+}
+
+.projectMobileLinks {
+  margin-bottom: 15px;
+}
+
+.projectDescription {
+  font-size: 15px;
+}
+
+@media only screen and (min-width: 400px) {
+  .techListContainer {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .techListContainer {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  .projectMobileImage {
+    width: 200px;
+    max-height: 322px;
+  }
 }

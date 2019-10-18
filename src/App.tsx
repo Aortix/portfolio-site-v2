@@ -1,9 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
 
-//Bootstrap components
-import Card from "react-bootstrap/Card";
-
 //React components
 import LandingPage from "./containers/LandingPage/LandingPage";
 import AboutMe from "./containers/AboutMe/AboutMe";

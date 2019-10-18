@@ -12,6 +12,11 @@
   margin: 7px;
 }
 
+.projectLinkText {
+  margin-right: 4px;
+  margin-left: 4px;
+}
+
 .projectImage {
   display: block;
   max-width: 400px;

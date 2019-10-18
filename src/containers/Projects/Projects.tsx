@@ -56,7 +56,7 @@ export default function Projects(props: AppProps) {
                   "MongoDB",
                   "AWS S3"
                 ]}
-                projectDescription="Social Media Website"
+                projectDescription="A social media website created with the MERN + Redux stack. Features user, profile, avatar, post, and comment creation using a REST API along with authentication using Passport.js and JWT."
               />
               <Project
                 projectName="Dodge The Stuff Ball Game"
@@ -69,7 +69,7 @@ export default function Projects(props: AppProps) {
                   "JavaScript",
                   "Canvas API"
                 ]}
-                projectDescription="This is a game where you are a ball that moves up and down on a canvas and your goal is to dodge the objects that are flying at you for as long as possible. As time goes on, dodging the objects becomes more difficult!"
+                projectDescription="A game where you dodge the objects that are flying at you until you reach the end of the timer. Features object collision, movement, and invincibility."
               />
               <Project
                 projectName="MoviesForEveryone"
@@ -84,20 +84,15 @@ export default function Projects(props: AppProps) {
                   "Redux",
                   "Node/Express"
                 ]}
-                projectDescription="Website for searching for movies that you may want to watch based off the filters that you set! Click on each movie to see more information about it!"
+                projectDescription="A website for searching for potential movies to watch. Features filtering, pagination, and working with an external REST API."
               />
               <Project
                 projectName="PTC-Elements"
                 projectGitHubLink="https://github.com/Aortix/Ptc-Elements"
                 projectLink="https://laughing-lamport-dd8fc4.netlify.com"
                 projectImage={PTCElementsImage}
-                projectTechnologies={[
-                  "HTML",
-                  "CSS",
-                  "JavaScript",
-                  "Gatsby.js (React)"
-                ]}
-                projectDescription="Displays the elements of the periodic table and provides information about them."
+                projectTechnologies={["HTML", "CSS", "JavaScript", "Gatsby.js"]}
+                projectDescription="A website that displays some of the elements of the periodic table and provides information about them."
               />
             </div>
             <h3 className={styles.subTitleText}>Mobile Development</h3>
@@ -114,7 +109,7 @@ export default function Projects(props: AppProps) {
                 "React Native Paper",
                 "Realm"
               ]}
-              projectDescription="A weekly tasks mobile application that keeps track of your daily tasks that you do throughout the week. Resets (unchecks) all tasks on each Monday. Material Design."
+              projectDescription="A weekly tasks mobile application that keeps track of your daily tasks that you do throughout the week and resets them every monday. Features task creation and storage using an embedded database system, local notifications, and material design."
               projectPlayStore={{
                 target:
                   "https://play.google.com/store/apps/details?id=com.weeklytasks&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1",
@@ -142,7 +137,7 @@ export default function Projects(props: AppProps) {
                 "Redux",
                 "lowdb"
               ]}
-              projectDescription="A weekly budget desktop application to keep track of your daily purchases throughout the week. Previous weeks are stored up to 12 weeks, and then the oldest weeks will be overwritten. Created with Javascript using Electron.js."
+              projectDescription="A weekly budget desktop application that keeps track of your daily purchases throughout the week. Information is saved and stored for up to 12 weeks through the use of an embedded database system."
             />
           </div>
         )}

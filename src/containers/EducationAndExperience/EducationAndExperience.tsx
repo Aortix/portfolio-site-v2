@@ -53,7 +53,7 @@ export default function EducationAndExperience(
                 companyOrSchool="MilliporeSigma"
                 duties={[
                   "Reviewed historical formulation and physical/chemical property data of company products to ensure that accurate information was present on Safety Data Sheets, labels, and package inserts of the products.",
-                  "Determined formulation and physical/chemical properties of substances through batch record analysis and with the use of two ERP systems, SAP and Oracle. If information was lacking on the formulation, it would be caculated manually.",
+                  "Determined formulation and physical/chemical properties of substances through batch record analysis and with the use of two ERP systems, SAP and Oracle.",
                   "Contacted vendors and suppliers for raw material formulations when necessary."
                 ]}
                 date="9/24/2012 - 9/03/2016"

@@ -36,9 +36,6 @@ export default function MyInformation(props: AppProps): React.ReactElement {
               <i className="fab fa-linkedin fa-lg"></i>
             </a>
           </div>
-          <div className={styles.switch}>
-            <i className="fas fa-adjust fa-lg"></i>
-          </div>
           <h1 className={styles.nameText}>Stephen Riding</h1>
           <p className={styles.contactText}>stephenriding12@gmail.com</p>
           <p className={styles.contactText}>858-633-3487</p>

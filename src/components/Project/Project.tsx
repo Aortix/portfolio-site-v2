@@ -36,7 +36,7 @@ function Project(props: AppProps) {
         >
           GitHub
         </a>
-        <span>&nbsp;|&nbsp;</span>
+        <span>|</span>
         <a
           href={props.projectLink}
           target="_blank"

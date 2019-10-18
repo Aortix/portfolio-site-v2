@@ -12,12 +12,12 @@
 
 .subTitleText {
   font-size: 26px;
+  max-width: 350px;
+  margin: 25px auto;
   border-top: 1px solid #707070;
   border-bottom: 1px solid #707070;
   text-align: center;
   padding: 2px;
-  margin-top: 25px;
-  margin-bottom: 25px;
 }
 
 .paragraphText {

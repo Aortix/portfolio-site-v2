@@ -66,14 +66,14 @@ function Project(props: AppProps) {
         </a>
       )}
       {technology === false ? (
-        <button
+        <div
           className={styles.toggleTechnologiesButton}
           onClick={() => {
             showTechnology(!technology);
           }}
         >
-          Display Technology
-        </button>
+          Display Technologies
+        </div>
       ) : (
         <Fragment>
           <button
@@ -82,7 +82,7 @@ function Project(props: AppProps) {
               showTechnology(!technology);
             }}
           >
-            Display Technology
+            Hide Technologies
           </button>
           <ul className={styles.techListContainer}>
             {props.projectTechnologies.map((tech, index, array) => {

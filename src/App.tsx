@@ -1,13 +1,17 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, Suspense, Fragment } from "react";
 import "./App.css";
 
 //React components
 import LandingPage from "./containers/LandingPage/LandingPage";
 import AboutMe from "./containers/AboutMe/AboutMe";
-import Projects from "./containers/Projects/Projects";
-import EducationAndExperience from "./containers/EducationAndExperience/EducationAndExperience";
-import ContactForm from "./containers/ContactForm/ContactForm";
 import ScrollToTopButton from "./components/ScrollToTopButton/ScrollToTopButton";
+const Projects = React.lazy(() => import("./containers/Projects/Projects"));
+const EducationAndExperience = React.lazy(() =>
+  import("./containers/EducationAndExperience/EducationAndExperience")
+);
+const ContactForm = React.lazy(() =>
+  import("./containers/ContactForm/ContactForm")
+);
 
 const App: React.FC = () => {
   const containers: string[] = [
@@ -34,9 +38,15 @@ const App: React.FC = () => {
         setInProp={setInProp}
       />
       <AboutMe isVisible={section} inProp={inProp} />
-      <Projects isVisible={section} inProp={inProp} />
-      <EducationAndExperience isVisible={section} inProp={inProp} />
-      <ContactForm isVisible={section} inProp={inProp} />
+      <Suspense fallback={<Fragment />}>
+        <Projects isVisible={section} inProp={inProp} />
+      </Suspense>
+      <Suspense fallback={<Fragment />}>
+        <EducationAndExperience isVisible={section} inProp={inProp} />
+      </Suspense>
+      <Suspense fallback={<Fragment />}>
+        <ContactForm isVisible={section} inProp={inProp} />
+      </Suspense>
       <ScrollToTopButton />
     </div>
   );

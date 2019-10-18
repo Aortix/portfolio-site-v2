@@ -10,7 +10,7 @@ interface AppProps {
   inProp: boolean;
 }
 
-export default function AboutMe(props: AppProps): React.ReactElement {
+const AboutMe = React.memo((props: AppProps) => {
   if (props.isVisible === "ABOUT ME") {
     return (
       <Transition in={props.inProp} timeout={easeInOut.duration}>
@@ -46,4 +46,6 @@ export default function AboutMe(props: AppProps): React.ReactElement {
   } else {
     return null;
   }
-}
+});
+
+export default AboutMe;

@@ -10,7 +10,7 @@ interface AppProps {
   inProp: boolean;
 }
 
-export default function ContactForm(props: AppProps): React.ReactElement {
+const ContactForm = React.memo((props: AppProps) => {
   if (props.isVisible === "CONTACT") {
     return (
       <Transition in={props.inProp} timeout={easeInOut.duration}>
@@ -48,4 +48,6 @@ export default function ContactForm(props: AppProps): React.ReactElement {
   } else {
     return null;
   }
-}
+});
+
+export default ContactForm;

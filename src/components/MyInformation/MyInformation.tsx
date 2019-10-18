@@ -9,7 +9,7 @@ interface AppProps {
   landingPageInProp: boolean;
 }
 
-export default function MyInformation(props: AppProps): React.ReactElement {
+const MyInformation = React.memo((props: AppProps) => {
   return (
     <Transition in={props.landingPageInProp} timeout={easeInOut.duration}>
       {state => (
@@ -43,4 +43,6 @@ export default function MyInformation(props: AppProps): React.ReactElement {
       )}
     </Transition>
   );
-}
+});
+
+export default MyInformation;

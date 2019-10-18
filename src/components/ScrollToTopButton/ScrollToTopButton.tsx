@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { PureComponent } from "react";
 import styles from "./ScrollToTopButton.module.css";
 import { Transition } from "react-transition-group";
 
@@ -10,7 +10,7 @@ interface AppState {
   inProp: boolean;
 }
 
-class ScrollToTopButton extends Component<AppProps, AppState> {
+class ScrollToTopButton extends PureComponent<AppProps, AppState> {
   constructor(props: AppProps) {
     super(props);
     this.state = {

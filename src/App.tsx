@@ -13,6 +13,14 @@ const ContactForm = React.lazy(() =>
   import("./containers/ContactForm/ContactForm")
 );
 
+const cssStyleSheet = {
+  "background-color": "white",
+  color: "#303030",
+  "font-family": "Sukhumvit Set, Quicksand, Times, serif",
+  "font-weight": 300,
+  "min-height": "100%"
+};
+
 const App: React.FC = () => {
   const containers: string[] = [
     "ABOUT ME",
@@ -23,31 +31,55 @@ const App: React.FC = () => {
 
   const [section, updateSection] = useState(containers[0]);
   const [inProp, setInProp] = useState(false);
+  const [darkTheme, toggleDarkTheme] = useState(
+    window.localStorage.getItem("theme") === "dark" ? true : false
+  );
 
   useEffect(() => {
     setInProp(true);
   }, []);
 
   return (
-    <div className="App">
+    <div
+      className="App"
+      style={
+        darkTheme === false
+          ? { ...cssStyleSheet }
+          : {
+              ...cssStyleSheet,
+              color: "hsl(0, 0%, 90%)",
+              backgroundColor: "hsl(0, 0%, 13%)"
+            }
+      }
+    >
       <LandingPage
         section={section}
         updateSection={updateSection}
         containers={containers}
         inProp={inProp}
         setInProp={setInProp}
+        darkTheme={darkTheme}
+        toggleDarkTheme={toggleDarkTheme}
       />
-      <AboutMe isVisible={section} inProp={inProp} />
+      <AboutMe isVisible={section} inProp={inProp} darkTheme={darkTheme} />
       <Suspense fallback={<Fragment />}>
-        <Projects isVisible={section} inProp={inProp} />
+        <Projects isVisible={section} inProp={inProp} darkTheme={darkTheme} />
       </Suspense>
       <Suspense fallback={<Fragment />}>
-        <EducationAndExperience isVisible={section} inProp={inProp} />
+        <EducationAndExperience
+          isVisible={section}
+          inProp={inProp}
+          darkTheme={darkTheme}
+        />
       </Suspense>
       <Suspense fallback={<Fragment />}>
-        <ContactForm isVisible={section} inProp={inProp} />
+        <ContactForm
+          isVisible={section}
+          inProp={inProp}
+          darkTheme={darkTheme}
+        />
       </Suspense>
-      <ScrollToTopButton />
+      <ScrollToTopButton darkTheme={darkTheme} />
     </div>
   );
 };

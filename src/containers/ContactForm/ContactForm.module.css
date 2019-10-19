@@ -1,4 +1,5 @@
 .mainContainer {
+  min-height: 70vh;
   width: 80%;
   max-width: 900px;
   margin: 0 auto;
@@ -38,6 +39,22 @@ form textarea {
 .formSubmitButton {
   border-radius: 5px;
   color: #606060;
+  background-color: inherit;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-size: 12px;
+  font-weight: 200;
+  cursor: pointer;
+  margin-top: 10px;
+  border: 1px solid rgb(192, 192, 192);
+  display: inline-block;
+}
+
+.formSubmitButtonDark {
+  border-radius: 5px;
+  color: hsl(0, 0%, 90%);
   background-color: inherit;
   padding-left: 15px;
   padding-right: 15px;

@@ -27,12 +27,6 @@
   height: 20px;
 }
 
-.links i:hover {
-  cursor: pointer;
-  color: white;
-  font-size: 33px;
-}
-
 .links a {
   color: inherit;
 }

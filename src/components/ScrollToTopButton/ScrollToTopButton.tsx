@@ -5,7 +5,9 @@ import { Transition } from "react-transition-group";
 //Transitions
 import { easeInOut } from "./../../transitions/easeInOut";
 
-interface AppProps { }
+interface AppProps {
+  darkTheme: boolean;
+}
 interface AppState {
   inProp: boolean;
 }
@@ -50,7 +52,11 @@ class ScrollToTopButton extends PureComponent<AppProps, AppState> {
         {state => (
           <div
             id="Scroll Button"
-            className={styles.mainContainer}
+            className={
+              this.props.darkTheme === false
+                ? styles.mainContainer
+                : styles.mainContainerDark
+            }
             style={{
               ...easeInOut.defaultStyle,
               ...easeInOut.transitionStyles[state]

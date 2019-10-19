@@ -11,6 +11,8 @@ interface AppProps {
   containers: string[];
   inProp: boolean;
   setInProp: (update: boolean) => void;
+  darkTheme: boolean;
+  toggleDarkTheme: (update: boolean) => void;
 }
 
 export default function LandingPage(props: AppProps): React.ReactElement {
@@ -22,7 +24,11 @@ export default function LandingPage(props: AppProps): React.ReactElement {
 
   return (
     <div id="Landing Page" className={styles.mainContainer}>
-      <MyInformation landingPageInProp={landingPageInProp} />
+      <MyInformation
+        landingPageInProp={landingPageInProp}
+        darkTheme={props.darkTheme}
+        toggleDarkTheme={props.toggleDarkTheme}
+      />
       <SectionBlock
         section={props.section}
         updateSection={props.updateSection}

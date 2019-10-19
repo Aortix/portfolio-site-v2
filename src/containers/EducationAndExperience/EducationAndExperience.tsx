@@ -13,6 +13,7 @@ const EducationOrExperience = React.lazy(() =>
 interface AppProps {
   isVisible: string;
   inProp: boolean;
+  darkTheme: boolean;
 }
 
 const EducationAndExperience = React.memo((props: AppProps) => {
@@ -31,7 +32,15 @@ const EducationAndExperience = React.memo((props: AppProps) => {
               <i className="fas fa-briefcase fa-2x"></i>
               <span className={styles.titleText}>Education and Experience</span>
             </div>
-            <p className={styles.subTitleText}>Education</p>
+            <p
+              className={
+                props.darkTheme === false
+                  ? styles.subTitleText
+                  : styles.subTitleTextDark
+              }
+            >
+              Education
+            </p>
             <div className={styles.educationContainer}>
               <Suspense fallback={<Fragment />}>
                 <EducationOrExperience
@@ -50,7 +59,15 @@ const EducationAndExperience = React.memo((props: AppProps) => {
                 />
               </Suspense>
             </div>
-            <p className={styles.subTitleText}>Experience</p>
+            <p
+              className={
+                props.darkTheme === false
+                  ? styles.subTitleText
+                  : styles.subTitleTextDark
+              }
+            >
+              Experience
+            </p>
             <div className={styles.experienceContainer}>
               <Suspense fallback={<Fragment />}>
                 <EducationOrExperience

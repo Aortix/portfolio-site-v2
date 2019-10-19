@@ -9,6 +9,17 @@
   cursor: pointer;
 }
 
+.mainContainerDark {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  border: 1px solid #f8f8f8;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
 .arrowContainer {
   display: flex;
   justify-content: center;

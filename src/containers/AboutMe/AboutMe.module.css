@@ -1,16 +1,15 @@
 .mainContainer {
+  min-height: 70vh;
   width: 80%;
   max-width: 900px;
   margin: 0 auto;
   line-height: 1.5;
-  margin-bottom: 15px;
   padding-bottom: 60px;
 }
 
 .titleContainer {
   margin-bottom: 25px;
   display: inline-block;
-  color: #282828;
 }
 
 .titleText {

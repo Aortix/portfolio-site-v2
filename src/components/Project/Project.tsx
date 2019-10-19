@@ -2,6 +2,7 @@ import React, { useState, Fragment } from "react";
 import styles from "./Project.module.css";
 
 interface AppProps {
+  darkTheme: boolean;
   projectName: string;
   projectGitHubLink: string;
   projectLink: string;
@@ -32,7 +33,11 @@ function Project(props: AppProps) {
           href={props.projectGitHubLink}
           target="_blank"
           rel="noopener noreferrer"
-          className={styles.projectLinkText}
+          className={
+            props.darkTheme === false
+              ? styles.projectLinkText
+              : styles.projectLinkTextDark
+          }
         >
           GitHub
         </a>
@@ -41,7 +46,11 @@ function Project(props: AppProps) {
           href={props.projectLink}
           target="_blank"
           rel="noopener noreferrer"
-          className={styles.projectLinkText}
+          className={
+            props.darkTheme === false
+              ? styles.projectLinkText
+              : styles.projectLinkTextDark
+          }
         >
           Website
         </a>
@@ -59,19 +68,23 @@ function Project(props: AppProps) {
           </a>
         </div>
       ) : (
-            <div className={styles.projectImageContainer}>
-              <a href={props.projectLink} target="_blank" rel="noopener noreferrer">
-                <img
-                  className={styles.projectMobileImage}
-                  src={props.projectMobileImage || props.projectMobileVideo}
-                  alt="Project Visualization"
-                />
-              </a>
-            </div>
-          )}
+        <div className={styles.projectImageContainer}>
+          <a href={props.projectLink} target="_blank" rel="noopener noreferrer">
+            <img
+              className={styles.projectMobileImage}
+              src={props.projectMobileImage || props.projectMobileVideo}
+              alt="Project Visualization"
+            />
+          </a>
+        </div>
+      )}
       {technology === false ? (
         <div
-          className={styles.toggleTechnologiesButton}
+          className={
+            props.darkTheme === false
+              ? styles.toggleTechnologiesButton
+              : styles.toggleTechnologiesButtonDark
+          }
           onClick={() => {
             showTechnology(!technology);
           }}
@@ -79,29 +92,37 @@ function Project(props: AppProps) {
           Display Technologies
         </div>
       ) : (
-          <Fragment>
-            <button
-              className={styles.toggleTechnologiesButton}
-              onClick={() => {
-                showTechnology(!technology);
-              }}
-            >
-              Hide Technologies
+        <Fragment>
+          <button
+            className={
+              props.darkTheme === false
+                ? styles.toggleTechnologiesButton
+                : styles.toggleTechnologiesButtonDark
+            }
+            onClick={() => {
+              showTechnology(!technology);
+            }}
+          >
+            Hide Technologies
           </button>
-            <ul className={styles.techListContainer}>
-              {props.projectTechnologies.map((tech, index, array) => {
-                return (
-                  <li
-                    key={props.projectName + tech + index}
-                    className={styles.techListText}
-                  >
-                    {tech}
-                  </li>
-                );
-              })}
-            </ul>
-          </Fragment>
-        )}
+          <ul className={styles.techListContainer}>
+            {props.projectTechnologies.map((tech, index, array) => {
+              return (
+                <li
+                  key={props.projectName + tech + index}
+                  className={
+                    props.darkTheme === false
+                      ? styles.techListText
+                      : styles.techListTextDark
+                  }
+                >
+                  {tech}
+                </li>
+              );
+            })}
+          </ul>
+        </Fragment>
+      )}
       {!props.projectPlayStore && !props.projectAppStore ? null : (
         <div className={styles.projectMobileLinks}>
           {!props.projectPlayStore ? null : (

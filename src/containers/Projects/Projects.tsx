@@ -20,6 +20,7 @@ const Project = React.lazy(() => import("./../../components/Project/Project"));
 interface AppProps {
   isVisible: string;
   inProp: boolean;
+  darkTheme: boolean;
 }
 
 const Projects = React.memo((props: AppProps) => {
@@ -38,10 +39,19 @@ const Projects = React.memo((props: AppProps) => {
               <i className="fas fa-cube fa-2x"></i>
               <span className={styles.titleText}>Projects</span>
             </div>
-            <h3 className={styles.subTitleText}>Web Development</h3>
+            <h3
+              className={
+                props.darkTheme === false
+                  ? styles.subTitleText
+                  : styles.subTitleTextDark
+              }
+            >
+              Web Development
+            </h3>
             <div className={styles.webProjects}>
               <Suspense fallback={<Fragment />}>
                 <Project
+                  darkTheme={props.darkTheme}
                   projectName="BuddyConnect"
                   projectGitHubLink="https://github.com/Aortix/BuddyConnect"
                   projectLink="https://protected-wildwood-18595.herokuapp.com/login"
@@ -62,6 +72,7 @@ const Projects = React.memo((props: AppProps) => {
               </Suspense>
               <Suspense fallback={<Fragment />}>
                 <Project
+                  darkTheme={props.darkTheme}
                   projectName="Dodge The Stuff Ball Game"
                   projectGitHubLink="https://github.com/Aortix/Dodge-The-Stuff-Ball-Game"
                   projectLink="https://dodgetheobjects.com"
@@ -77,6 +88,7 @@ const Projects = React.memo((props: AppProps) => {
               </Suspense>
               <Suspense fallback={<Fragment />}>
                 <Project
+                  darkTheme={props.darkTheme}
                   projectName="MoviesForEveryone"
                   projectGitHubLink="https://github.com/Aortix/MoviesForEveryone"
                   projectLink="https://cryptic-badlands-88386.herokuapp.com"
@@ -94,6 +106,7 @@ const Projects = React.memo((props: AppProps) => {
               </Suspense>
               <Suspense fallback={<Fragment />}>
                 <Project
+                  darkTheme={props.darkTheme}
                   projectName="PTC-Elements"
                   projectGitHubLink="https://github.com/Aortix/Ptc-Elements"
                   projectLink="https://laughing-lamport-dd8fc4.netlify.com"
@@ -108,9 +121,18 @@ const Projects = React.memo((props: AppProps) => {
                 />
               </Suspense>
             </div>
-            <h3 className={styles.subTitleText}>Mobile Development</h3>
+            <h3
+              className={
+                props.darkTheme === false
+                  ? styles.subTitleText
+                  : styles.subTitleTextDark
+              }
+            >
+              Mobile Development
+            </h3>
             <Suspense fallback={<Fragment />}>
               <Project
+                darkTheme={props.darkTheme}
                 projectName="Weekly Task Planner"
                 projectGitHubLink="https://github.com/Aortix/WeeklyTasks"
                 projectLink="https://apps.apple.com/us/app/weekly-task-planner/id1475793415?ls=1"
@@ -137,9 +159,18 @@ const Projects = React.memo((props: AppProps) => {
                 }}
               />
             </Suspense>
-            <h3 className={styles.subTitleText}>Desktop Development</h3>
+            <h3
+              className={
+                props.darkTheme === false
+                  ? styles.subTitleText
+                  : styles.subTitleTextDark
+              }
+            >
+              Desktop Development
+            </h3>
             <Suspense fallback={<Fragment />}>
               <Project
+                darkTheme={props.darkTheme}
                 projectName="Weekly Budget Application"
                 projectGitHubLink="https://github.com/Aortix/Budget-of-the-Week"
                 projectLink="https://github.com/Aortix/Budget-of-the-Week/releases"

@@ -8,6 +8,7 @@ import { easeInOut } from "./../../transitions/easeInOut";
 interface AppProps {
   isVisible: string;
   inProp: boolean;
+  darkTheme: boolean;
 }
 
 const ContactForm = React.memo((props: AppProps) => {
@@ -33,12 +34,29 @@ const ContactForm = React.memo((props: AppProps) => {
               <label htmlFor="company">Company</label>
               <input type="text" id="company" name="company" required></input>
               <label htmlFor="contact-email">Contact Email</label>
-              <input type="email" id="contact-email" name="email" required></input>
+              <input
+                type="email"
+                id="contact-email"
+                name="email"
+                required
+              ></input>
               <label htmlFor="phone">Phone (Optional)</label>
               <input type="text" id="phone" name="phone"></input>
               <label htmlFor="message">Message</label>
-              <textarea id="message" rows={6} name="message" required></textarea>
-              <button type="submit" className={styles.formSubmitButton}>
+              <textarea
+                id="message"
+                rows={6}
+                name="message"
+                required
+              ></textarea>
+              <button
+                type="submit"
+                className={
+                  props.darkTheme === false
+                    ? styles.formSubmitButton
+                    : styles.formSubmitButtonDark
+                }
+              >
                 Submit
               </button>
             </form>

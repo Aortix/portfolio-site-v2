@@ -3,10 +3,11 @@
   max-width: 900px;
   margin: 0 auto;
   line-height: 1.5;
+  padding-bottom: 60px;
 }
 
 .titleText {
-  font-size: 34px;
+  font-size: 38px;
   margin-left: 5px;
 }
 

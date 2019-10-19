@@ -1,17 +1,20 @@
 .mainContainer {
   text-align: center;
+  width: 90%;
+  margin: 0 auto;
 }
 
 .nameText {
+  margin: 0 auto;
   margin-top: 60px;
   margin-bottom: 10px;
-  font-size: 64px;
+  font-size: 66px;
   font-weight: 500;
-  font-family: "SignPainter";
+  font-family: "SignPainter", "Dancing Script";
 }
 
 .contactText {
-  font-family: "Avenir";
+  font-family: "Avenir", "Quicksand";
   font-size: 17px;
   margin: 0;
 }
@@ -25,7 +28,7 @@
 }
 
 .links i {
-  margin: 3px;
+  margin-right: 10px;
 }
 
 .links a {

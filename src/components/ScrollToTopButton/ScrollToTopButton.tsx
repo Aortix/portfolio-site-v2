@@ -5,7 +5,7 @@ import { Transition } from "react-transition-group";
 //Transitions
 import { easeInOut } from "./../../transitions/easeInOut";
 
-interface AppProps {}
+interface AppProps { }
 interface AppState {
   inProp: boolean;
 }

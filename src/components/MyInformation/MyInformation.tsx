@@ -26,14 +26,14 @@ const MyInformation = React.memo((props: AppProps) => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <i className="fab fa-github fa-lg"></i>
+              <i className="fab fa-github fa-2x"></i>
             </a>
             <a
               href="https://www.linkedin.com/in/stephen-riding-564ab36b/"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <i className="fab fa-linkedin fa-lg"></i>
+              <i className="fab fa-linkedin fa-2x"></i>
             </a>
           </div>
           <h1 className={styles.nameText}>Stephen Riding</h1>

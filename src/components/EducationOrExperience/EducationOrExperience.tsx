@@ -18,12 +18,12 @@ function EducationOrExperience(props: AppProps) {
         {props.degree ? (
           <h5>{props.degree}</h5>
         ) : (
-          <ul>
-            {props.duties.map((duty, index) => {
-              return <li key={duty + index}>{duty}</li>;
-            })}
-          </ul>
-        )}
+            <ul>
+              {props.duties.map((duty, index) => {
+                return <li key={duty + index}>{duty}</li>;
+              })}
+            </ul>
+          )}
         <p>{props.date}</p>
       </div>
     </div>

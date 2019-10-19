@@ -49,22 +49,26 @@ function Project(props: AppProps) {
       {props.projectVideo ? (
         <p>Video info here</p>
       ) : !props.projectMobileImage && !props.projectMobileVideo ? (
-        <a href={props.projectLink} target="_blank" rel="noopener noreferrer">
-          <img
-            className={styles.projectImage}
-            src={props.projectImage}
-            alt="Project Visualization"
-          />
-        </a>
+        <div className={styles.projectImageContainer}>
+          <a href={props.projectLink} target="_blank" rel="noopener noreferrer">
+            <img
+              className={styles.projectImage}
+              src={props.projectImage}
+              alt="Project Visualization"
+            />
+          </a>
+        </div>
       ) : (
-        <a href={props.projectLink} target="_blank" rel="noopener noreferrer">
-          <img
-            className={styles.projectMobileImage}
-            src={props.projectMobileImage || props.projectMobileVideo}
-            alt="Project Visualization"
-          />
-        </a>
-      )}
+            <div className={styles.projectImageContainer}>
+              <a href={props.projectLink} target="_blank" rel="noopener noreferrer">
+                <img
+                  className={styles.projectMobileImage}
+                  src={props.projectMobileImage || props.projectMobileVideo}
+                  alt="Project Visualization"
+                />
+              </a>
+            </div>
+          )}
       {technology === false ? (
         <div
           className={styles.toggleTechnologiesButton}
@@ -75,29 +79,29 @@ function Project(props: AppProps) {
           Display Technologies
         </div>
       ) : (
-        <Fragment>
-          <button
-            className={styles.toggleTechnologiesButton}
-            onClick={() => {
-              showTechnology(!technology);
-            }}
-          >
-            Hide Technologies
+          <Fragment>
+            <button
+              className={styles.toggleTechnologiesButton}
+              onClick={() => {
+                showTechnology(!technology);
+              }}
+            >
+              Hide Technologies
           </button>
-          <ul className={styles.techListContainer}>
-            {props.projectTechnologies.map((tech, index, array) => {
-              return (
-                <li
-                  key={props.projectName + tech + index}
-                  className={styles.techListText}
-                >
-                  {tech}
-                </li>
-              );
-            })}
-          </ul>
-        </Fragment>
-      )}
+            <ul className={styles.techListContainer}>
+              {props.projectTechnologies.map((tech, index, array) => {
+                return (
+                  <li
+                    key={props.projectName + tech + index}
+                    className={styles.techListText}
+                  >
+                    {tech}
+                  </li>
+                );
+              })}
+            </ul>
+          </Fragment>
+        )}
       {!props.projectPlayStore && !props.projectAppStore ? null : (
         <div className={styles.projectMobileLinks}>
           {!props.projectPlayStore ? null : (

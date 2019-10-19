@@ -27,15 +27,15 @@ const AboutMe = React.memo((props: AppProps) => {
               <span className={styles.titleText}>About Me</span>
             </div>
             <p className={styles.paragraphText}>
-              Hello, <br />
-              <br />I am an aspiring developer who has spent the last eight
+              Hello there, <br />
+              <br />My name is Stephen and I am an aspiring developer who has spent the last eight
               months studying and creating projects with JavaScript. For most of
               that time, I have focused on creating web applications with react,
-              redux, and node. These technologies were my priority since my main
+              redux, and node. These technologies have been my priority since my main
               goal has been to switch careers and become a web developer. I have
-              spent the remaining time creating a desktop and mobile application
-              using similar technologies. Developing all these projects has
-              been quite the learning experience so far, and has made me realize
+              spent the remaining time creating desktop and mobile applications
+              using similar technologies. Developing all of these projects has
+              been quite the learning experience for me, and has made me realize
               just how much I enjoy coding.
             </p>
           </div>

@@ -26,17 +26,18 @@ const ContactForm = React.memo((props: AppProps) => {
               <i className="far fa-id-card fa-2x"></i>
               <span className={styles.titleText}>Contact Form</span>
             </div>
-            <form>
+            <form name="contact" method="post">
+              <input type="hidden" name="form-name" value="contact" />
               <label htmlFor="name">Name</label>
-              <input type="text" id="name" required></input>
+              <input type="text" id="name" name="name" required></input>
               <label htmlFor="company">Company</label>
-              <input type="text" id="company" required></input>
+              <input type="text" id="company" name="company" required></input>
               <label htmlFor="contact-email">Contact Email</label>
-              <input type="text" id="contact-email" required></input>
+              <input type="email" id="contact-email" name="email" required></input>
               <label htmlFor="phone">Phone (Optional)</label>
-              <input type="text" id="phone"></input>
+              <input type="text" id="phone" name="phone"></input>
               <label htmlFor="message">Message</label>
-              <textarea id="message" rows={6} required></textarea>
+              <textarea id="message" rows={6} name="message" required></textarea>
               <button type="submit" className={styles.formSubmitButton}>
                 Submit
               </button>

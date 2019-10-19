@@ -17,20 +17,20 @@
   margin-left: 4px;
 }
 
-.projectImage {
+.projectImageContainer {
   display: block;
-  max-width: 400px;
-  max-height: 260px;
-  margin: 0 auto;
+}
+
+.projectImage {
+  display: inline-block;
+  max-width: 250px;
+  max-height: 162px;
   cursor: pointer;
-  width: 100%;
   border: 1px solid black;
 }
 
 .projectMobileImage {
-  display: block;
   max-height: 290px;
-  margin: 0 auto;
   cursor: pointer;
   width: 180px;
   border: 1px solid black;
@@ -89,6 +89,13 @@
   .techListContainer {
     grid-template-columns: 1fr 1fr 1fr;
   }
+}
+
+@media only screen and (min-width: 460px) {
+  .projectImage {
+    max-width: 400px;
+    max-height: 260px;
+}
 }
 
 @media only screen and (min-width: 600px) {

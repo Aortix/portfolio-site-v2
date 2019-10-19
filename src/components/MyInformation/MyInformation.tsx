@@ -28,6 +28,7 @@ const MyInformation = React.memo((props: AppProps) => {
             >
               <i className="fab fa-github fa-2x"></i>
             </a>
+            &nbsp;&nbsp;
             <a
               href="https://www.linkedin.com/in/stephen-riding-564ab36b/"
               target="_blank"

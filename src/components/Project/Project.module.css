@@ -91,7 +91,7 @@
 }
 
 .techListText {
-  max-width: 120px;
+  max-width: 130px;
   display: inline-block;
   color: #606060;
   background-color: #f8f8f8;
@@ -102,7 +102,7 @@
 }
 
 .techListTextDark {
-  max-width: 120px;
+  max-width: 130px;
   display: inline-block;
   color: #f8f8f8;
   background-color: #303030;

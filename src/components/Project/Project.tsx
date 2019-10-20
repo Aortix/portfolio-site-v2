@@ -78,51 +78,23 @@ function Project(props: AppProps) {
           </a>
         </div>
       )}
-      {technology === false ? (
-        <div
-          className={
-            props.darkTheme === false
-              ? styles.toggleTechnologiesButton
-              : styles.toggleTechnologiesButtonDark
-          }
-          onClick={() => {
-            showTechnology(!technology);
-          }}
-        >
-          Display Technologies
-        </div>
-      ) : (
-        <Fragment>
-          <button
-            className={
-              props.darkTheme === false
-                ? styles.toggleTechnologiesButton
-                : styles.toggleTechnologiesButtonDark
-            }
-            onClick={() => {
-              showTechnology(!technology);
-            }}
-          >
-            Hide Technologies
-          </button>
-          <ul className={styles.techListContainer}>
-            {props.projectTechnologies.map((tech, index, array) => {
-              return (
-                <li
-                  key={props.projectName + tech + index}
-                  className={
-                    props.darkTheme === false
-                      ? styles.techListText
-                      : styles.techListTextDark
-                  }
-                >
-                  {tech}
-                </li>
-              );
-            })}
-          </ul>
-        </Fragment>
-      )}
+      <ul className={styles.techListContainer}>
+        {props.projectTechnologies.map((tech, index, array) => {
+          return (
+            <li
+              key={props.projectName + tech + index}
+              className={
+                props.darkTheme === false
+                  ? styles.techListText
+                  : styles.techListTextDark
+              }
+            >
+              {tech}
+            </li>
+          );
+        })}
+      </ul>
+
       {!props.projectPlayStore && !props.projectAppStore ? null : (
         <div className={styles.projectMobileLinks}>
           {!props.projectPlayStore ? null : (

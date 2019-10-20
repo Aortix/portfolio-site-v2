@@ -1,4 +1,4 @@
-import React, { useState, Fragment } from "react";
+import React from "react";
 import styles from "./Project.module.css";
 
 interface AppProps {
@@ -23,8 +23,6 @@ interface AppProps {
 }
 
 function Project(props: AppProps) {
-  const [technology, showTechnology] = useState(false);
-
   return (
     <div className={styles.mainContainer}>
       <h4 className={styles.projectNameText}>{props.projectName}</h4>

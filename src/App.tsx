@@ -1,5 +1,6 @@
 import React, { useState, useEffect, Suspense, Fragment } from "react";
 import "./App.css";
+import ReactGA from "react-ga";
 
 //React components
 import LandingPage from "./containers/LandingPage/LandingPage";
@@ -14,11 +15,11 @@ const ContactForm = React.lazy(() =>
 );
 
 const cssStyleSheet = {
-  "background-color": "white",
+  backgroundColor: "white",
   color: "#303030",
-  "font-family": "Sukhumvit Set, Quicksand, Times, serif",
-  "font-weight": 300,
-  "min-height": "100%"
+  fontFamily: "Sukhumvit Set, Quicksand, Times, serif",
+  fontWeight: 300,
+  minHeight: "100%"
 };
 
 const App: React.FC = () => {
@@ -36,6 +37,10 @@ const App: React.FC = () => {
   );
 
   useEffect(() => {
+    //Setting up google analytics
+    ReactGA.initialize("UA-147236324-3");
+    ReactGA.pageview(window.location.pathname + window.location.search);
+
     setInProp(true);
   }, []);
 

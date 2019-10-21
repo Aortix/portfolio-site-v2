@@ -78,7 +78,7 @@ const EducationAndExperience = React.memo((props: AppProps) => {
                     "Determined formulation and physical/chemical properties of substances through batch record analysis and with the use of two ERP systems, SAP and Oracle.",
                     "Contacted vendors and suppliers for raw material formulations when necessary."
                   ]}
-                  date="9/24/2012 - 9/03/2016"
+                  date="February 2017 - December 2018"
                 />
               </Suspense>
             </div>

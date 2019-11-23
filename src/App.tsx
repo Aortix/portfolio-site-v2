@@ -6,10 +6,8 @@ import ReactGA from "react-ga";
 import LandingPage from "./containers/LandingPage/LandingPage";
 import AboutMe from "./containers/AboutMe/AboutMe";
 import ScrollToTopButton from "./components/ScrollToTopButton/ScrollToTopButton";
-const Projects = React.lazy(() => import("./containers/Projects/Projects"));
-const EducationAndExperience = React.lazy(() =>
-  import("./containers/EducationAndExperience/EducationAndExperience")
-);
+import Projects from "./containers/Projects/Projects";
+import EducationAndExperience from "./containers/EducationAndExperience/EducationAndExperience";
 const ContactForm = React.lazy(() =>
   import("./containers/ContactForm/ContactForm")
 );

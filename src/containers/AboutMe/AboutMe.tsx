@@ -30,14 +30,16 @@ const AboutMe = React.memo((props: AppProps) => {
             <p className={styles.paragraphText}>
               Hello there, <br />
               <br />
-              My name is Stephen and I am an aspiring developer who has spent
-              the last ten months studying and creating projects with
-              JavaScript. For most of that time, I have focused on creating web
-              applications with react, redux, and node. The remaining time I
-              have spent creating desktop and mobile applications using similar
-              technologies. Developing all of these projects has been quite the
-              learning experience for me, and has made me realize just how much
-              I enjoy coding.
+              My name is Stephen and I am trying to make a career change into
+              IT. I have spent the last ten months studying and creating
+              projects with the programming language JavaScript. For most of
+              that time, I have focused on creating web applications using the
+              JavaScript framework React and the runtime Node.js. I have spent
+              the remaining time creating desktop and mobile applications with
+              similar technologies. Developing all of these projects has been
+              quite the learning experience for me and I want to continue
+              learning as much as I can. To see the work I've done so far,
+              please check out the projects tab on this website.
             </p>
           </div>
         )}

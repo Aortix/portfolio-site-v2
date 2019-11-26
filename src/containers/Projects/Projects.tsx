@@ -5,6 +5,7 @@ import { Transition } from "react-transition-group";
 //Images
 import BuddyConnectImage from "./../../images/buddyconnect-login.png";
 import DodgeTheObjectsImage from "./../../images/dodge-the-objects-screenshot.jpg";
+import JobKeeperLogImage from "./../../images/jkl-pic1.png";
 import MoviesForEveryoneImage from "./../../images/moviesforeveryone-mainpage.png";
 import PTCElementsImage from "./../../images/ptc-elements-1.png";
 import BudgetAppImage from "./../../images/budgetelectronapp1.png";
@@ -84,6 +85,25 @@ const Projects = React.memo((props: AppProps) => {
                     "Canvas API"
                   ]}
                   projectDescription="A game where you dodge the objects that are flying at you until you reach the end of the timer. Features object collision, movement, and invincibility."
+                />
+              </Suspense>
+              <Suspense fallback={<Fragment />}>
+                <Project
+                  darkTheme={props.darkTheme}
+                  projectName="Job Seeker Log"
+                  projectGitHubLink="https://github.com/Aortix/JobSeekerLog"
+                  projectLink="https://secure-beyond-19702.herokuapp.com/index.php"
+                  projectImage={JobKeeperLogImage}
+                  projectTechnologies={[
+                    "PHP",
+                    "MySQL",
+                    "Linux",
+                    "Apache",
+                    "HTML",
+                    "CSS",
+                    "JavaScript"
+                  ]}
+                  projectDescription="Website for saving information about job applications while searching for a job. CRUD application with job data being created, read, updated, and deleted using PHP and MySQL."
                 />
               </Suspense>
               <Suspense fallback={<Fragment />}>

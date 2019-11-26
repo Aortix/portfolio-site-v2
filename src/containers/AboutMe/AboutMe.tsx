@@ -32,14 +32,14 @@ const AboutMe = React.memo((props: AppProps) => {
               <br />
               My name is Stephen and I am trying to make a career change into
               IT. I have spent the last ten months studying and creating
-              projects with the programming language JavaScript. For most of
-              that time, I have focused on creating web applications using the
-              JavaScript framework React and the runtime Node.js. I have spent
-              the remaining time creating desktop and mobile applications with
-              similar technologies. Developing all of these projects has been
-              quite the learning experience for me and I want to continue
-              learning as much as I can. To see the work I've done so far,
-              please check out the projects tab on this website.
+              projects with the programming language JavaScript (and some PHP).
+              For most of that time, I have focused on creating web applications
+              using the JavaScript framework React and the runtime Node.js. I
+              have spent the remaining time creating desktop and mobile
+              applications with similar technologies. Developing all of these
+              projects has been quite the learning experience for me and I want
+              to continue learning as much as I can. To see the work I've done
+              so far, please check out the projects tab on this website.
             </p>
           </div>
         )}

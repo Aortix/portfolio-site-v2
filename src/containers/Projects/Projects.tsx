@@ -55,7 +55,7 @@ const Projects = React.memo((props: AppProps) => {
                   darkTheme={props.darkTheme}
                   projectName="BuddyConnect"
                   projectGitHubLink="https://github.com/Aortix/BuddyConnect"
-                  projectLink="https://protected-wildwood-18595.herokuapp.com/login"
+                  projectLink="https://buddyconnecter.herokuapp.com/"
                   projectImage={BuddyConnectImage}
                   projectTechnologies={[
                     "HTML",
@@ -92,7 +92,7 @@ const Projects = React.memo((props: AppProps) => {
                   darkTheme={props.darkTheme}
                   projectName="Job Seeker Log"
                   projectGitHubLink="https://github.com/Aortix/JobSeekerLog"
-                  projectLink="https://secure-beyond-19702.herokuapp.com/index.php"
+                  projectLink="https://jobseekerlog.herokuapp.com/"
                   projectImage={JobKeeperLogImage}
                   projectTechnologies={[
                     "PHP",
@@ -111,7 +111,7 @@ const Projects = React.memo((props: AppProps) => {
                   darkTheme={props.darkTheme}
                   projectName="MoviesForEveryone"
                   projectGitHubLink="https://github.com/Aortix/MoviesForEveryone"
-                  projectLink="https://cryptic-badlands-88386.herokuapp.com"
+                  projectLink="https://moviesforeveryone.herokuapp.com/"
                   projectImage={MoviesForEveryoneImage}
                   projectTechnologies={[
                     "HTML",

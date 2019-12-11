@@ -28,9 +28,11 @@ const MyInformation = React.memo((props: AppProps) => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <i className="fab fa-github fa-2x"></i>
+              <i
+                className="fab fa-github fa-2x"
+                style={{ marginRight: "6px" }}
+              ></i>
             </a>
-            &nbsp;&nbsp;
             <a
               href="https://www.linkedin.com/in/stephen-riding-564ab36b/"
               target="_blank"

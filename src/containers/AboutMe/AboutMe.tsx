@@ -28,18 +28,32 @@ const AboutMe = React.memo((props: AppProps) => {
               <span className={styles.titleText}>About Me</span>
             </div>
             <p className={styles.paragraphText}>
-              Hello there, <br />
+              Hello visitor, <br />
               <br />
-              My name is Stephen and I am trying to make a career change into
-              IT. I have spent the last ten months studying and creating
-              projects with the programming language JavaScript (and some PHP).
-              For most of that time, I have focused on creating web applications
-              using the JavaScript framework React and the runtime Node.js. I
-              have spent the remaining time creating desktop and mobile
-              applications with similar technologies. Developing all of these
-              projects has been quite the learning experience for me and I want
-              to continue learning as much as I can. To see the work I've done
-              so far, please check out the projects tab on this website.
+              My name is Stephen and I am currently looking for a career change
+              to IT. In order to make this change a reality, I have obtained an
+              Associates degree in Computer Information Systems with a
+              concentration on programming, and I have spent the last eleven
+              months studying and creating personal web, mobile, and desktop
+              projects using technologies like HTML, CSS, JavaScript, React,
+              Redux, Node.js, Bootstrap, MongoDB, PHP, MySQL, Electron.js, React
+              Native, and Git. If you head over to the projects section of this
+              website or to my GitHub, you can see all of these technologies and
+              more in action.
+              <br />
+              <br />
+              On top of programming, I've also taken introductory courses on
+              Windows Server and Networking. I've had a fond interest in
+              computers for a while now and thus, have tampered with things like
+              linux, virtual machines, putting together PCs, and other smaller
+              things like setting up static IP addresses. I used to help my
+              family with PC issues all the time growing up. Anyway, that was a
+              quick background of me and what I've been doing so far, and if you
+              want to know a bit more about me then you can check out some of
+              the other sections.
+              <br />
+              <br />
+              Thanks!
             </p>
           </div>
         )}

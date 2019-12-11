@@ -41,7 +41,7 @@ const Certifications = React.memo((props: AppProps) => {
             >
               Udemy Courses
             </p>
-            <div>
+            <div className={styles.courseContainer}>
               <p className={styles.courseTitleText}>
                 JavaScript Data Structures and Algorithms Masterclass
               </p>
@@ -62,7 +62,7 @@ const Certifications = React.memo((props: AppProps) => {
                 </a>
               </div>
             </div>
-            <div>
+            <div className={styles.courseContainer}>
               <p className={styles.courseTitleText}>
                 MERN Stack Front To Back: Full Stack React, Redux and Node.js
               </p>
@@ -83,7 +83,7 @@ const Certifications = React.memo((props: AppProps) => {
                 </a>
               </div>
             </div>
-            <div>
+            <div className={styles.courseContainer}>
               <p className={styles.courseTitleText}>
                 Microsoft Windows Server 2016 Training for Beginners
               </p>

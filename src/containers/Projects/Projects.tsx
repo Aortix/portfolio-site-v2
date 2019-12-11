@@ -41,6 +41,11 @@ const Projects = React.memo((props: AppProps) => {
               <span className={styles.titleText}>Projects</span>
             </div>
             <h3
+              id={
+                props.darkTheme === false
+                  ? styles.webDevelopmentTitle1
+                  : styles.webDevelopmentTitle1Dark
+              }
               className={
                 props.darkTheme === false
                   ? styles.subTitleText
@@ -142,6 +147,11 @@ const Projects = React.memo((props: AppProps) => {
               </Suspense>
             </div>
             <h3
+              id={
+                props.darkTheme === false
+                  ? styles.webDevelopmentTitle2
+                  : styles.webDevelopmentTitle2Dark
+              }
               className={
                 props.darkTheme === false
                   ? styles.subTitleText

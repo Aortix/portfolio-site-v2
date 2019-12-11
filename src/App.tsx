@@ -8,6 +8,7 @@ import AboutMe from "./containers/AboutMe/AboutMe";
 import ScrollToTopButton from "./components/ScrollToTopButton/ScrollToTopButton";
 import Projects from "./containers/Projects/Projects";
 import EducationAndExperience from "./containers/EducationAndExperience/EducationAndExperience";
+import Certifications from "./containers/Certifications/Certifications";
 const ContactForm = React.lazy(() =>
   import("./containers/ContactForm/ContactForm")
 );
@@ -25,6 +26,7 @@ const App: React.FC = () => {
     "ABOUT ME",
     "PROJECTS",
     "EDUCATION & EXPERIENCE",
+    "CERTIFICATES",
     "CONTACT"
   ];
 
@@ -70,6 +72,20 @@ const App: React.FC = () => {
       </Suspense>
       <Suspense fallback={<Fragment />}>
         <EducationAndExperience
+          isVisible={section}
+          inProp={inProp}
+          darkTheme={darkTheme}
+        />
+      </Suspense>
+      <Suspense fallback={<Fragment />}>
+        <EducationAndExperience
+          isVisible={section}
+          inProp={inProp}
+          darkTheme={darkTheme}
+        />
+      </Suspense>
+      <Suspense fallback={<Fragment />}>
+        <Certifications
           isVisible={section}
           inProp={inProp}
           darkTheme={darkTheme}

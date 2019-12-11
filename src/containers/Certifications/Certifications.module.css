@@ -39,18 +39,18 @@
   background-image: linear-gradient(-45deg, hsl(0, 0%, 12%), hsl(0, 0%, 16%));
 }
 
-.educationContainer {
-  display: grid;
+.courseTitleText {
+  font-size: 26px;
+  font-weight: 600;
+}
+
+.courseLinksContainer {
+  display: inline-grid;
+  grid-template-rows: 1fr 1fr;
   grid-template-columns: 1fr;
-  grid-column-gap: 25px;
 }
 
 .paragraphText {
-  font-size: 19px;
-}
-
-@media only screen and (min-width: 800px) {
-  .educationContainer {
-    grid-template-columns: 1fr 1fr;
-  }
+  display: inline-block;
+  font-size: 22px;
 }

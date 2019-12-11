@@ -78,13 +78,6 @@ const App: React.FC = () => {
         />
       </Suspense>
       <Suspense fallback={<Fragment />}>
-        <EducationAndExperience
-          isVisible={section}
-          inProp={inProp}
-          darkTheme={darkTheme}
-        />
-      </Suspense>
-      <Suspense fallback={<Fragment />}>
         <Certifications
           isVisible={section}
           inProp={inProp}

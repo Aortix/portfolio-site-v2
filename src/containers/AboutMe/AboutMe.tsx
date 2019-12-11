@@ -42,18 +42,18 @@ const AboutMe = React.memo((props: AppProps) => {
               more in action.
               <br />
               <br />
-              On top of programming, I've also taken introductory courses on
-              Windows Server and Networking. I've had a fond interest in
+              On top of programming, I've also taken an introductory course on
+              Windows Server and I am currently working through a course on
+              Networking and Information Security. I've had a fond interest in
               computers for a while now and thus, have tampered with things like
               linux, virtual machines, putting together PCs, and other smaller
               things like setting up static IP addresses. I used to help my
-              family with PC issues all the time growing up. Anyway, that was a
-              quick background of me and what I've been doing so far, and if you
-              want to know a bit more about me then you can check out some of
-              the other sections.
+              family with PC issues all the time too.
               <br />
               <br />
-              Thanks!
+              And with that, my introduction is over and if you want to know a
+              bit more about me then you can check out some of the other
+              sections on the website. Thanks for taking the time to read this!
             </p>
           </div>
         )}

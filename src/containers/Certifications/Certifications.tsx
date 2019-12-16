@@ -9,6 +9,7 @@ import { easeInOut } from "./../../transitions/easeInOut";
 import data_structures_and_algorithms_course_certificate from "../../pdfs/data_structures_and_algorithms_course_certificate.pdf";
 import mern_stack_course_certificate from "../../pdfs/mern_stack_course_certificate.pdf";
 import windows_server_2016_course_certificate from "../../pdfs/windows_server_2016_course_certificate.pdf";
+import computer_networks_course_certificate from "../../pdfs/computer_networks_course_certificate.pdf";
 
 interface AppProps {
   isVisible: string;
@@ -97,6 +98,27 @@ const Certifications = React.memo((props: AppProps) => {
                 </a>
                 <a
                   href="https://www.udemy.com/course/windows-server-2016/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <p className={styles.paragraphText}>Course Itself</p>
+                </a>
+              </div>
+            </div>
+            <div className={styles.courseContainer}>
+              <p className={styles.courseTitleText}>
+                Introduction to Computer Networks
+              </p>
+              <div className={styles.courseLinksContainer}>
+                <a
+                  href={computer_networks_course_certificate}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <p className={styles.paragraphText}>Completion Certificate</p>
+                </a>
+                <a
+                  href="https://www.udemy.com/course/introduction-to-computer-networks/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >

@@ -21,12 +21,12 @@ const Certifications = React.memo((props: AppProps) => {
   if (props.isVisible === "CERTIFICATES") {
     return (
       <Transition in={props.inProp} timeout={easeInOut.duration}>
-        {state => (
+        {(state) => (
           <div
             className={styles.mainContainer}
             style={{
               ...easeInOut.defaultStyle,
-              ...easeInOut.transitionStyles[state]
+              ...easeInOut.transitionStyles[state],
             }}
           >
             <div className={styles.titleContainer}>
@@ -41,6 +41,10 @@ const Certifications = React.memo((props: AppProps) => {
               }
             >
               Udemy Courses
+            </p>
+            <p className={styles.notice}>
+              I have taken more courses than those listed, but did not 100%
+              complete them.
             </p>
             <div className={styles.courseContainer}>
               <p className={styles.courseTitleText}>

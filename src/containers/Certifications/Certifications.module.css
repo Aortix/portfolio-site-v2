@@ -39,6 +39,15 @@
   background-image: linear-gradient(-45deg, hsl(0, 0%, 12%), hsl(0, 0%, 16%));
 }
 
+.notice {
+  display: inline-block;
+  font-size: 22px;
+  padding: 9px;
+  color: white;
+  background-color: rgb(168, 56, 56);
+  margin-bottom: 35px;
+}
+
 .courseContainer {
   margin-bottom: 35px;
 }

@@ -14,12 +14,12 @@ interface AppProps {
 const MyInformation = React.memo((props: AppProps) => {
   return (
     <Transition in={props.landingPageInProp} timeout={easeInOut.duration}>
-      {state => (
+      {(state) => (
         <div
           className={styles.mainContainer}
           style={{
             ...easeInOut.defaultStyle,
-            ...easeInOut.transitionStyles[state]
+            ...easeInOut.transitionStyles[state],
           }}
         >
           <div className={styles.links}>
@@ -42,6 +42,16 @@ const MyInformation = React.memo((props: AppProps) => {
             </a>
           </div>
           <div className={styles.switch}>
+            <p
+              style={{
+                display: "inline-block",
+                marginBottom: "0px",
+                marginRight: "7px",
+                fontSize: "19px",
+              }}
+            >
+              Toggle Lights
+            </p>
             <i
               className="fas fa-adjust fa-2x"
               onClick={() => {
@@ -54,7 +64,7 @@ const MyInformation = React.memo((props: AppProps) => {
             ></i>
           </div>
           <h1 className={styles.nameText}>Stephen Riding</h1>
-          <p className={styles.contactText}>stephenriding12@gmail.com</p>
+          <p className={styles.contactText}>ridingjr@gmail.com</p>
           <p className={styles.contactText}>951-834-7183</p>
         </div>
       )}

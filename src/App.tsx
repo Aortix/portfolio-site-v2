@@ -18,7 +18,7 @@ const cssStyleSheet = {
   color: "#303030",
   fontFamily: "Sukhumvit Set, Quicksand, Times, serif",
   fontWeight: 300,
-  minHeight: "100%"
+  minHeight: "100%",
 };
 
 const App: React.FC = () => {
@@ -27,7 +27,7 @@ const App: React.FC = () => {
     "PROJECTS",
     "EDUCATION & EXPERIENCE",
     "CERTIFICATES",
-    "CONTACT"
+    "CONTACT",
   ];
 
   const [section, updateSection] = useState(containers[0]);
@@ -53,7 +53,7 @@ const App: React.FC = () => {
           : {
               ...cssStyleSheet,
               color: "hsl(0, 0%, 90%)",
-              backgroundColor: "hsl(0, 0%, 13%)"
+              backgroundColor: "hsl(0, 0%, 13%)",
             }
       }
     >

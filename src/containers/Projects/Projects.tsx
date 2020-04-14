@@ -8,7 +8,7 @@ import DodgeTheObjectsImage from "./../../images/dodge-the-objects-screenshot.jp
 import JobKeeperLogImage from "./../../images/job-seeker-log.png";
 import MoviesForEveryoneImage from "./../../images/moviesforeveryone-mainpage.png";
 import BudgetAppImage from "./../../images/budgetelectronapp1.png";
-import TaskAppImage from "./../../images/weeklytasks.png";
+import TaskAppImage from "./../../images/weeklytasks-iphone.png";
 import PostShiftImage from "./../../images/post-shift.png";
 import ShortStoriesImage from "./../../images/shortstories.png";
 import AppStoreLogo from "./../../images/appstorelogo.svg";
@@ -103,7 +103,7 @@ const Projects = React.memo((props: AppProps) => {
                   darkTheme={props.darkTheme}
                   projectName="post-shift (Name of theme)"
                   projectGitHubLink="https://github.com/Aortix/post-shift"
-                  projectLink="http://sriding-blog.com/"
+                  projectLink="https://sriding-blog.com/"
                   projectImage={PostShiftImage}
                   projectTechnologies={[
                     "PHP",

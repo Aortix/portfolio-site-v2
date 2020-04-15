@@ -75,7 +75,8 @@ const Projects = React.memo((props: AppProps) => {
                     "Bootstrap",
                     "JavaScript",
                   ]}
-                  projectDescription="A .NET Core web application that allows users to write out their own short stories and for anyone to read their stories and follow them if they want to read more from them."
+                  projectDescription="A .NET Core web application that allows user registration and users can write out their own short stories and they will be displayed on the site. Users can follow other users so that their stories
+                  appear in their follower feed and there is a filter feed that will display any and all stories based off the selected filter."
                 />
               </Suspense>
               <Suspense fallback={<Fragment />}>
@@ -95,7 +96,7 @@ const Projects = React.memo((props: AppProps) => {
                     "Bootstrap",
                     "JavaScript",
                   ]}
-                  projectDescription="Website for saving information about job applications while searching for a job. CRUD application with job data being created, read, updated, and deleted using PHP and MySQL."
+                  projectDescription="LAMP web application for saving information about job applications while searching for a job. Job information will be saved to the user's profile and can be searched through."
                 />
               </Suspense>
               <Suspense fallback={<Fragment />}>
@@ -113,7 +114,7 @@ const Projects = React.memo((props: AppProps) => {
                     "CSS",
                     "JavaScript",
                   ]}
-                  projectDescription="Custom WordPress Theme."
+                  projectDescription="post-shift is a custom WordPress theme that I created. The site displayed above is a site of mine that is using the theme."
                 />
               </Suspense>
               <Suspense fallback={<Fragment />}>
@@ -135,7 +136,7 @@ const Projects = React.memo((props: AppProps) => {
                     "MongoDB",
                     "AWS S3",
                   ]}
-                  projectDescription="A social media website created with the MERN + Redux stack. Features user, profile, avatar, post, and comment creation using a REST API along with authentication using Passport.js and JWT."
+                  projectDescription="MERN web application that features user, profile, avatar, post, and comment creation using a REST API and authentication with Passport.js and JWTs."
                 />
               </Suspense>
               <Suspense fallback={<Fragment />}>
@@ -151,7 +152,7 @@ const Projects = React.memo((props: AppProps) => {
                     "JavaScript",
                     "Canvas API",
                   ]}
-                  projectDescription="A game where you dodge the objects that are flying at you until you reach the end of the timer. Features object collision, movement, and invincibility."
+                  projectDescription="A Canvas game where you dodge the objects that are flying at you until you reach the end of the timer. Features object collision, movement, and invincibility."
                 />
               </Suspense>
               <Suspense fallback={<Fragment />}>
@@ -169,7 +170,7 @@ const Projects = React.memo((props: AppProps) => {
                     "Redux",
                     "Node/Express",
                   ]}
-                  projectDescription="A website for searching for potential movies to watch. Features filtering, pagination, and working with an external REST API."
+                  projectDescription="React and Node web application for searching for potential movies to watch. Features filtering, pagination, and making requests to an external 3rd party API."
                 />
               </Suspense>
             </div>

@@ -48,6 +48,7 @@ const MyInformation = React.memo((props: AppProps) => {
                 marginBottom: "0px",
                 marginRight: "7px",
                 fontSize: "19px",
+                cursor: "default",
               }}
             >
               Toggle Lights

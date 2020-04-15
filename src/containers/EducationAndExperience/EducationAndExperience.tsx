@@ -20,12 +20,12 @@ const EducationAndExperience = React.memo((props: AppProps) => {
   if (props.isVisible === "EDUCATION & EXPERIENCE") {
     return (
       <Transition in={props.inProp} timeout={easeInOut.duration}>
-        {state => (
+        {(state) => (
           <div
             className={styles.mainContainer}
             style={{
               ...easeInOut.defaultStyle,
-              ...easeInOut.transitionStyles[state]
+              ...easeInOut.transitionStyles[state],
             }}
           >
             <div className={styles.titleContainer}>
@@ -55,7 +55,7 @@ const EducationAndExperience = React.memo((props: AppProps) => {
                   title="Pharmacological Chemistry"
                   companyOrSchool="University of California, San Diego"
                   degree="Bachelor's Degree"
-                  date="9/24/2012 - 9/03/2016"
+                  date="9/24/2012 - 7/30/2016"
                 />
               </Suspense>
             </div>
@@ -76,7 +76,7 @@ const EducationAndExperience = React.memo((props: AppProps) => {
                   duties={[
                     "Reviewed historical formulation and physical/chemical property data of company products to ensure that accurate information was present on Safety Data Sheets, labels, and package inserts of the products.",
                     "Determined formulation and physical/chemical properties of substances through batch record analysis and with the use of two ERP systems, SAP and Oracle.",
-                    "Contacted vendors and suppliers for raw material formulations when necessary."
+                    "Contacted vendors and suppliers for raw material formulations when necessary.",
                   ]}
                   date="February 2017 - December 2018"
                 />

@@ -36,10 +36,10 @@ const AboutMe = React.memo((props: AppProps) => {
               concentration in programming, and I have spent the last fifteen
               months studying and creating personal web, mobile, and desktop
               projects using multiple different technologies like HTML, CSS,
-              JavaScript, React, Redux, Node.js, PHP, MySQL, C#, .NET Core, SQL
-              Server, React Native, and more. If you head over to the projects
-              section on this website or to my GitHub, you can see most of my
-              work.
+              JavaScript, React, Redux, Node.js, PHP, MySQL, WordPress, C#, .NET
+              Core, SQL Server, React Native, and more. If you head over to the
+              projects section on this website or to my GitHub, you can see most
+              of my work.
               <br />
               <br />
               In addition to programming, I have also studied a bit on other IT

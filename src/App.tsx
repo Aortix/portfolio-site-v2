@@ -26,7 +26,7 @@ const App: React.FC = () => {
     "ABOUT ME",
     "PROJECTS",
     "EDUCATION & EXPERIENCE",
-    "CERTIFICATES",
+    /*"CERTIFICATES",*/
     "CONTACT",
   ];
 
@@ -77,6 +77,7 @@ const App: React.FC = () => {
           darkTheme={darkTheme}
         />
       </Suspense>
+      {/*
       <Suspense fallback={<Fragment />}>
         <Certifications
           isVisible={section}
@@ -84,6 +85,7 @@ const App: React.FC = () => {
           darkTheme={darkTheme}
         />
       </Suspense>
+      */}
       <Suspense fallback={<Fragment />}>
         <ContactForm
           isVisible={section}

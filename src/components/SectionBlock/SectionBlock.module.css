@@ -24,7 +24,7 @@
 
 @media only screen and (min-width: 900px) {
   .mainContainer {
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-column-gap: 25px;
   }
 }

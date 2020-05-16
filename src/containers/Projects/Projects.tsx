@@ -61,7 +61,7 @@ const Projects = React.memo((props: AppProps) => {
                   darkTheme={props.darkTheme}
                   projectName="Shortstories"
                   projectGitHubLink="https://github.com/Aortix/Shortstories"
-                  projectLink="https://shortstories20200409092134.azurewebsites.net/"
+                  projectLink="https://www.short-storys.com/"
                   projectImage={ShortStoriesImage}
                   projectTechnologies={[
                     "C#",

@@ -30,25 +30,19 @@ const AboutMe = React.memo((props: AppProps) => {
             <p className={styles.paragraphText}>
               Hello, <br />
               <br />
-              My name is Stephen and I am currently looking for a career change
-              to IT. In order to make this change a reality, I have obtained an
-              Associates degree in Computer Information Systems with a
-              concentration in programming, and I have spent the last fifteen
-              months studying and creating personal web, mobile, and desktop
-              projects using multiple different technologies like HTML, CSS,
-              JavaScript, React, Redux, Node.js, PHP, MySQL, WordPress, C#, .NET
-              Core, SQL Server, React Native, and more. If you head over to the
-              projects section on this website or to my GitHub, you can see most
-              of my work.
+              My name is Stephen and I am currently teaching myself software
+              development using different online resources and by creating
+              personal projects. All of my projects can be found on this site
+              and the code is usually viewable on my GitHub. The reason I have
+              been taking the time to learn about this is so that one day,
+              whether it’s through my career or a side business of mine, I can
+              have some work doing software development. My highest education
+              right now is in chemistry and while I certainly still enjoy
+              chemistry and science in general, I want this new interest to
+              coexist with them if possible.
               <br />
               <br />
-              In addition to programming, I have also studied a bit on other IT
-              subjects like networking, VMs, and Windows Server.
-              <br />
-              <br />
-              And with that, my introduction is over and if you want to know
-              more about me then you can check out some of the other sections on
-              the website. Thank you for taking the time to read this!
+              Thank you for reading.
             </p>
           </div>
         )}

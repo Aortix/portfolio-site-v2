@@ -66,7 +66,7 @@ const MyInformation = React.memo((props: AppProps) => {
           </div>
           <h1 className={styles.nameText}>Stephen Riding</h1>
           <p className={styles.contactText}>ridingjr@gmail.com</p>
-          <p className={styles.contactText}>951-834-7183</p>
+          <p className={styles.contactText}>858-633-3487</p>
         </div>
       )}
     </Transition>

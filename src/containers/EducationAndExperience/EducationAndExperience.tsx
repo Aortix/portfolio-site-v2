@@ -44,14 +44,6 @@ const EducationAndExperience = React.memo((props: AppProps) => {
             <div className={styles.educationContainer}>
               <Suspense fallback={<Fragment />}>
                 <EducationOrExperience
-                  title="Computer Information Systems"
-                  companyOrSchool="Mt. San Jacinto College"
-                  degree="Associate's Degree"
-                  date="8/15/2016 - 12/15/2017"
-                />
-              </Suspense>
-              <Suspense fallback={<Fragment />}>
-                <EducationOrExperience
                   title="Pharmacological Chemistry"
                   companyOrSchool="University of California, San Diego"
                   degree="Bachelor's Degree"

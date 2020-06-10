@@ -31,15 +31,10 @@ const AboutMe = React.memo((props: AppProps) => {
               Hello, <br />
               <br />
               My name is Stephen and I am currently teaching myself software
-              development using different online resources and by creating
-              personal projects. All of my projects can be found on this site
-              and the code is usually viewable on my GitHub. The reason I have
-              been taking the time to learn about this is so that one day,
-              whether it’s through my career or a side business of mine, I can
-              have some work doing software development. My highest education
-              right now is in chemistry and while I certainly still enjoy
-              chemistry and science in general, I want this new interest to
-              coexist with them if possible.
+              development using online resources and by creating personal
+              projects. I have always wanted to learn about this and decided to
+              do so after my last job ended. All of my projects can be found on
+              this site and the code is usually viewable on my GitHub.
               <br />
               <br />
               Thank you for reading.

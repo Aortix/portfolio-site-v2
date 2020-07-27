@@ -1,9 +1,9 @@
-import React from "react";
-import styles from "./AboutMe.module.css";
-import { Transition } from "react-transition-group";
+import React from 'react';
+import styles from './AboutMe.module.css';
+import { Transition } from 'react-transition-group';
 
 //Transitions
-import { easeInOut } from "./../../transitions/easeInOut";
+import { easeInOut } from './../../transitions/easeInOut';
 
 interface AppProps {
   isVisible: string;
@@ -12,7 +12,7 @@ interface AppProps {
 }
 
 const AboutMe = React.memo((props: AppProps) => {
-  if (props.isVisible === "ABOUT ME") {
+  if (props.isVisible === 'ABOUT ME') {
     return (
       <Transition in={props.inProp} timeout={easeInOut.duration}>
         {(state) => (
@@ -30,14 +30,18 @@ const AboutMe = React.memo((props: AppProps) => {
             <p className={styles.paragraphText}>
               Hello, <br />
               <br />
-              My name is Stephen and I am currently teaching myself software
-              development using online resources and by creating personal
-              projects. I have always wanted to learn about this and decided to
-              do so after my last job ended. All of my projects can be found on
-              this site and the code is usually viewable on my GitHub.
+              My name is Stephen and I am trying to make a career change to IT.
+              On top of getting an AS in Computer Information Systems, I have
+              spent over a year studying software development and creating
+              personal projects. Now that I feel more confident with my
+              programming ability, I am now studying to hopefully pass some
+              certification exams (i.e. Network+, Security+, AWS Solutions
+              Architect) to feel more confident with infrastructure. I'm always
+              learning and don't plan on stopping anytime soon.
               <br />
               <br />
-              Thank you for reading.
+              If you want to know more about me, then don't hesistate to contact
+              me. Thank you for reading.
             </p>
           </div>
         )}

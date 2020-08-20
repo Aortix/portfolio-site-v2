@@ -31,17 +31,12 @@ const AboutMe = React.memo((props: AppProps) => {
               Hello, <br />
               <br />
               My name is Stephen and I am trying to make a career change to IT.
-              On top of getting an AS in Computer Information Systems, I have
-              spent over a year studying software development and creating
-              personal projects. Now that I feel more confident with my
-              programming ability, I am now studying to hopefully pass some
-              certification exams (i.e. Network+, Security+, AWS Solutions
-              Architect) to feel more confident with infrastructure. I'm always
-              learning and don't plan on stopping anytime soon.
-              <br />
-              <br />
-              If you want to know more about me, then don't hesistate to contact
-              me. Thank you for reading.
+              I obtained an AS in Computer Information Systems as a starting
+              point and I have spent over the last year studying software
+              development and creating personal software projects. I now feel
+              more confident on the programming side of things and I am now
+              studying to hopefully pass some certifications to improve my
+              credentials.
             </p>
           </div>
         )}

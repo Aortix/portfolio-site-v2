@@ -33,13 +33,6 @@ const MyInformation = React.memo((props: AppProps) => {
                 style={{ marginRight: "6px" }}
               ></i>
             </a>
-            <a
-              href="https://www.linkedin.com/in/stephen-riding-564ab36b/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <i className="fab fa-linkedin fa-2x"></i>
-            </a>
           </div>
           <div className={styles.switch}>
             <p

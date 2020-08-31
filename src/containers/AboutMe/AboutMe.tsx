@@ -1,9 +1,9 @@
-import React from 'react';
-import styles from './AboutMe.module.css';
-import { Transition } from 'react-transition-group';
+import React from "react";
+import styles from "./AboutMe.module.css";
+import { Transition } from "react-transition-group";
 
 //Transitions
-import { easeInOut } from './../../transitions/easeInOut';
+import { easeInOut } from "./../../transitions/easeInOut";
 
 interface AppProps {
   isVisible: string;
@@ -12,7 +12,7 @@ interface AppProps {
 }
 
 const AboutMe = React.memo((props: AppProps) => {
-  if (props.isVisible === 'ABOUT ME') {
+  if (props.isVisible === "ABOUT ME") {
     return (
       <Transition in={props.inProp} timeout={easeInOut.duration}>
         {(state) => (
@@ -30,13 +30,8 @@ const AboutMe = React.memo((props: AppProps) => {
             <p className={styles.paragraphText}>
               Hello, <br />
               <br />
-              My name is Stephen and I am trying to make a career change to IT.
-              I obtained an AS in Computer Information Systems as a starting
-              point and I have spent over the last year studying software
-              development and creating personal software projects. I now feel
-              more confident on the programming side of things and I am now
-              studying to hopefully pass some certifications to improve my
-              credentials.
+              All my personal projects related to software development will be
+              posted on here.
             </p>
           </div>
         )}

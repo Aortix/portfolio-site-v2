@@ -28,10 +28,11 @@ const AboutMe = React.memo((props: AppProps) => {
               <span className={styles.titleText}>About Me</span>
             </div>
             <p className={styles.paragraphText}>
-              Hello, <br />
+              Hello there, <br />
               <br />
-              All my personal projects related to software development will be
-              posted on here.
+              My name is Stephen and in addition to Chemistry, I also have an
+              interest in Software Development and will be posting references to
+              my software applications on this site.
             </p>
           </div>
         )}

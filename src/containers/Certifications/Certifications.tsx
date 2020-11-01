@@ -5,12 +5,6 @@ import { Transition } from "react-transition-group";
 //Transitions
 import { easeInOut } from "./../../transitions/easeInOut";
 
-//PDF certificates
-import data_structures_and_algorithms_course_certificate from "../../pdfs/data_structures_and_algorithms_course_certificate.pdf";
-import mern_stack_course_certificate from "../../pdfs/mern_stack_course_certificate.pdf";
-import windows_server_2016_course_certificate from "../../pdfs/windows_server_2016_course_certificate.pdf";
-import computer_networks_course_certificate from "../../pdfs/computer_networks_course_certificate.pdf";
-
 interface AppProps {
   isVisible: string;
   inProp: boolean;
@@ -31,7 +25,7 @@ const Certifications = React.memo((props: AppProps) => {
           >
             <div className={styles.titleContainer}>
               <i className="fas fa-certificate fa-2x"></i>
-              <span className={styles.titleText}>Certificates</span>
+              <span className={styles.titleText}>Certifications</span>
             </div>
             <p
               className={
@@ -40,93 +34,18 @@ const Certifications = React.memo((props: AppProps) => {
                   : styles.subTitleTextDark
               }
             >
-              Udemy Courses
-            </p>
-            <p className={styles.notice}>
-              I have taken more courses than those listed, but did not 100%
-              complete them.
+              CompTIA
             </p>
             <div className={styles.courseContainer}>
-              <p className={styles.courseTitleText}>
-                JavaScript Data Structures and Algorithms Masterclass
-              </p>
+              <p className={styles.courseTitleText}>Network+</p>
               <div className={styles.courseLinksContainer}>
+                <p className={styles.paragraphText}>Completed October 2020</p>
                 <a
-                  href={data_structures_and_algorithms_course_certificate}
+                  href="https://www.youracclaim.com/badges/53d692e3-9053-406e-a451-b9dc8a46c049"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <p className={styles.paragraphText}>Completion Certificate</p>
-                </a>
-                <a
-                  href="https://www.udemy.com/course/js-algorithms-and-data-structures-masterclass/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <p className={styles.paragraphText}>Course Itself</p>
-                </a>
-              </div>
-            </div>
-            <div className={styles.courseContainer}>
-              <p className={styles.courseTitleText}>
-                MERN Stack Front To Back: Full Stack React, Redux and Node.js
-              </p>
-              <div className={styles.courseLinksContainer}>
-                <a
-                  href={mern_stack_course_certificate}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <p className={styles.paragraphText}>Completion Certificate</p>
-                </a>
-                <a
-                  href="https://www.udemy.com/course/mern-stack-front-to-back/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <p className={styles.paragraphText}>Course Itself</p>
-                </a>
-              </div>
-            </div>
-            <div className={styles.courseContainer}>
-              <p className={styles.courseTitleText}>
-                Microsoft Windows Server 2016 Training for Beginners
-              </p>
-              <div className={styles.courseLinksContainer}>
-                <a
-                  href={windows_server_2016_course_certificate}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <p className={styles.paragraphText}>Completion Certificate</p>
-                </a>
-                <a
-                  href="https://www.udemy.com/course/windows-server-2016/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <p className={styles.paragraphText}>Course Itself</p>
-                </a>
-              </div>
-            </div>
-            <div className={styles.courseContainer}>
-              <p className={styles.courseTitleText}>
-                Introduction to Computer Networks
-              </p>
-              <div className={styles.courseLinksContainer}>
-                <a
-                  href={computer_networks_course_certificate}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <p className={styles.paragraphText}>Completion Certificate</p>
-                </a>
-                <a
-                  href="https://www.udemy.com/course/introduction-to-computer-networks/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <p className={styles.paragraphText}>Course Itself</p>
+                  <p className={styles.paragraphText}>Badge</p>
                 </a>
               </div>
             </div>

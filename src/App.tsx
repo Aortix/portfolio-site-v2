@@ -9,9 +9,6 @@ import ScrollToTopButton from "./components/ScrollToTopButton/ScrollToTopButton"
 import Projects from "./containers/Projects/Projects";
 import EducationAndExperience from "./containers/EducationAndExperience/EducationAndExperience";
 import Certifications from "./containers/Certifications/Certifications";
-const ContactForm = React.lazy(() =>
-  import("./containers/ContactForm/ContactForm")
-);
 
 const cssStyleSheet = {
   backgroundColor: "white",
@@ -25,9 +22,8 @@ const App: React.FC = () => {
   const containers: string[] = [
     "ABOUT ME",
     "PROJECTS",
+    "CERTIFICATES",
     "EDUCATION & EXPERIENCE",
-    /*"CERTIFICATES",*/
-    "CONTACT",
   ];
 
   const [section, updateSection] = useState(containers[0]);
@@ -77,22 +73,15 @@ const App: React.FC = () => {
           darkTheme={darkTheme}
         />
       </Suspense>
-      {/*
-      <Suspense fallback={<Fragment />}>
-        <Certifications
-          isVisible={section}
-          inProp={inProp}
-          darkTheme={darkTheme}
-        />
-      </Suspense>
-      */}
-      <Suspense fallback={<Fragment />}>
-        <ContactForm
-          isVisible={section}
-          inProp={inProp}
-          darkTheme={darkTheme}
-        />
-      </Suspense>
+      {
+        <Suspense fallback={<Fragment />}>
+          <Certifications
+            isVisible={section}
+            inProp={inProp}
+            darkTheme={darkTheme}
+          />
+        </Suspense>
+      }
       <ScrollToTopButton darkTheme={darkTheme} />
     </div>
   );

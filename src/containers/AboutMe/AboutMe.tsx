@@ -30,9 +30,9 @@ const AboutMe = React.memo((props: AppProps) => {
             <p className={styles.paragraphText}>
               Hello there, <br />
               <br />
-              My name is Stephen and in addition to Chemistry, I also have an
-              interest in Software Development and will be posting references to
-              my software applications on this site.
+              My name is Stephen and I am trying to transition to a career in
+              IT. My projects and certifications will be posted here. Source
+              code will available on GitHub.
             </p>
           </div>
         )}
